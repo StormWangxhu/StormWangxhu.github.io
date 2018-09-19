@@ -93,7 +93,7 @@
 <meta name="description" content="所谓博客，不过孤芳自赏   前言 Java 与 C++ 之间有一堵由内存动态分配和垃圾收集技术所围成的“高墙”，墙外面的人想进去，墙里面的人想出来。  本篇博文主要输出JVM的常见垃圾回收算法（也就是面试官长问到的GC），以及在 JVM 虚拟机中，JVM 是如何判断对象的有效性、对象在内存中是按照什么规则存放的，请带上你的好奇心慢慢往下读。 在JVM内存区域中，属于线程私有的程序计数器、虚拟机栈">
 <meta name="keywords" content="GC,JVM 垃圾收集器,内存分配策略">
 <meta property="og:type" content="article">
-<meta property="og:title" content="（四）初探 JVM 垃圾收集器和内存分配策略">
+<meta property="og:title" content="初探 JVM 垃圾收集器和内存分配策略">
 <meta property="og:url" content="https://stormwangxhu.github.io/2018/04/08/初探-JVM-垃圾收集器和内存分配策略/index.html">
 <meta property="og:site_name" content="StormWangxhu&#39; s blog">
 <meta property="og:description" content="所谓博客，不过孤芳自赏   前言 Java 与 C++ 之间有一堵由内存动态分配和垃圾收集技术所围成的“高墙”，墙外面的人想进去，墙里面的人想出来。  本篇博文主要输出JVM的常见垃圾回收算法（也就是面试官长问到的GC），以及在 JVM 虚拟机中，JVM 是如何判断对象的有效性、对象在内存中是按照什么规则存放的，请带上你的好奇心慢慢往下读。 在JVM内存区域中，属于线程私有的程序计数器、虚拟机栈">
@@ -111,9 +111,9 @@
 <meta property="og:image" content="http://p0c736231.bkt.clouddn.com/ParNew.png">
 <meta property="og:image" content="http://p0c736231.bkt.clouddn.com/Serial%20Old.png">
 <meta property="og:image" content="http://p0c736231.bkt.clouddn.com/CMS.png">
-<meta property="og:updated_time" content="2018-09-19T11:59:27.214Z">
+<meta property="og:updated_time" content="2018-09-19T12:08:43.137Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="（四）初探 JVM 垃圾收集器和内存分配策略">
+<meta name="twitter:title" content="初探 JVM 垃圾收集器和内存分配策略">
 <meta name="twitter:description" content="所谓博客，不过孤芳自赏   前言 Java 与 C++ 之间有一堵由内存动态分配和垃圾收集技术所围成的“高墙”，墙外面的人想进去，墙里面的人想出来。  本篇博文主要输出JVM的常见垃圾回收算法（也就是面试官长问到的GC），以及在 JVM 虚拟机中，JVM 是如何判断对象的有效性、对象在内存中是按照什么规则存放的，请带上你的好奇心慢慢往下读。 在JVM内存区域中，属于线程私有的程序计数器、虚拟机栈">
 <meta name="twitter:image" content="http://p0c736231.bkt.clouddn.com/%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B.png">
 
@@ -151,7 +151,7 @@
 
 
 
-  <title>（四）初探 JVM 垃圾收集器和内存分配策略 | StormWangxhu' s blog</title>
+  <title>初探 JVM 垃圾收集器和内存分配策略 | StormWangxhu' s blog</title>
   
 
 
@@ -350,7 +350,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">（四）初探 JVM 垃圾收集器和内存分配策略</h1>
+          <h1 class="post-title" itemprop="name headline">初探 JVM 垃圾收集器和内存分配策略</h1>
         
 
         <div class="post-meta">
