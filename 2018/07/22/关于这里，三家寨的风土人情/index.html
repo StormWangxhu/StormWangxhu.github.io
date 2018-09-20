@@ -79,6 +79,7 @@
 
 
 
+  <meta name="keywords" content="生活,支教," />
 
 
 
@@ -88,16 +89,27 @@
 
 
 
-<meta name="description" content="生活的最佳状态便是冷冷清清的风风火火">
-<meta property="og:type" content="website">
-<meta property="og:title" content="StormWangxhu&#39; s blog">
-<meta property="og:url" content="https://stormwangxhu.github.io/archives/2018/index.html">
+
+<meta name="description" content="或许满怀着期待和憧憬，所以抵挡住了一天一夜的车程的疲惫。在昭通火车站下火车后，我们就被接着走了。因夜已深，大部分餐馆已经闭门歇业，只有拐角处的一家烧烤店在打扫着最后关门前的烧烤屋，阿訇和寺管叔叔请我们在此吃了一顿烧烤。随后我们四人便向目的地前进，送走了另外两位后，又载着我们来到了三家寨。或许是因为放下了高度紧绷的神经，坐上车便已睡意朦胧。 靠在搭档的肩膀上睡着了，不知不觉便已到了，让我们惊讶的是我">
+<meta name="keywords" content="生活,支教">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初探 JVM 垃圾收集器和内存分配策略">
+<meta property="og:url" content="https://stormwangxhu.github.io/2018/07/22/关于这里，三家寨的风土人情/index.html">
 <meta property="og:site_name" content="StormWangxhu&#39; s blog">
-<meta property="og:description" content="生活的最佳状态便是冷冷清清的风风火火">
+<meta property="og:description" content="或许满怀着期待和憧憬，所以抵挡住了一天一夜的车程的疲惫。在昭通火车站下火车后，我们就被接着走了。因夜已深，大部分餐馆已经闭门歇业，只有拐角处的一家烧烤店在打扫着最后关门前的烧烤屋，阿訇和寺管叔叔请我们在此吃了一顿烧烤。随后我们四人便向目的地前进，送走了另外两位后，又载着我们来到了三家寨。或许是因为放下了高度紧绷的神经，坐上车便已睡意朦胧。 靠在搭档的肩膀上睡着了，不知不觉便已到了，让我们惊讶的是我">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://stormwangxhu.github.io/2018/07/22/关于这里，三家寨的风土人情/images/自有.jpg">
+<meta property="og:image" content="https://stormwangxhu.github.io/2018/07/22/关于这里，三家寨的风土人情/images/192978519.jpg">
+<meta property="og:image" content="https://stormwangxhu.github.io/2018/07/22/关于这里，三家寨的风土人情/images/奖状.jpg">
+<meta property="og:image" content="https://stormwangxhu.github.io/2018/07/22/关于这里，三家寨的风土人情/images/2072055380.jpg">
+<meta property="og:image" content="https://stormwangxhu.github.io/2018/07/22/关于这里，三家寨的风土人情/images/721101599.jpg">
+<meta property="og:image" content="https://stormwangxhu.github.io/2018/07/22/关于这里，三家寨的风土人情/images/1130664459.jpg">
+<meta property="og:image" content="https://stormwangxhu.github.io/2018/07/22/关于这里，三家寨的风土人情/images/1963889052.jpg">
+<meta property="og:updated_time" content="2018-09-20T10:32:23.783Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="StormWangxhu&#39; s blog">
-<meta name="twitter:description" content="生活的最佳状态便是冷冷清清的风风火火">
+<meta name="twitter:title" content="初探 JVM 垃圾收集器和内存分配策略">
+<meta name="twitter:description" content="或许满怀着期待和憧憬，所以抵挡住了一天一夜的车程的疲惫。在昭通火车站下火车后，我们就被接着走了。因夜已深，大部分餐馆已经闭门歇业，只有拐角处的一家烧烤店在打扫着最后关门前的烧烤屋，阿訇和寺管叔叔请我们在此吃了一顿烧烤。随后我们四人便向目的地前进，送走了另外两位后，又载着我们来到了三家寨。或许是因为放下了高度紧绷的神经，坐上车便已睡意朦胧。 靠在搭档的肩膀上睡着了，不知不觉便已到了，让我们惊讶的是我">
+<meta name="twitter:image" content="https://stormwangxhu.github.io/2018/07/22/关于这里，三家寨的风土人情/images/自有.jpg">
 
 
 
@@ -127,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="https://stormwangxhu.github.io/archives/2018/"/>
+  <link rel="canonical" href="https://stormwangxhu.github.io/2018/07/22/关于这里，三家寨的风土人情/"/>
 
 
 
 
 
-  <title>归档 | StormWangxhu' s blog</title>
+  <title>初探 JVM 垃圾收集器和内存分配策略 | StormWangxhu' s blog</title>
   
 
 
@@ -162,7 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -301,370 +313,239 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://stormwangxhu.github.io/2018/07/22/关于这里，三家寨的风土人情/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="StormWangxhu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avator.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="StormWangxhu' s blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">初探 JVM 垃圾收集器和内存分配策略</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-22T00:00:00+08:00">
+                2018-07-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 10 篇博文。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/生活/" itemprop="url" rel="index">
+                    <span itemprop="name">生活</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
+      
 
+      
+        <p>或许满怀着期待和憧憬，所以抵挡住了一天一夜的车程的疲惫。在昭通火车站下火车后，我们就被接着走了。因夜已深，大部分餐馆已经闭门歇业，只有拐角处的一家烧烤店在打扫着最后关门前的烧烤屋，阿訇和寺管叔叔请我们在此吃了一顿烧烤。随后我们四人便向目的地前进，送走了另外两位后，又载着我们来到了三家寨。或许是因为放下了高度紧绷的神经，坐上车便已睡意朦胧。</p>
+<p>靠在搭档的肩膀上睡着了，不知不觉便已到了，让我们惊讶的是我们见到的住宿环境比我们想象的要好的多的多，床铺子都是新的，软软的很舒服。住宿是在教室里，教室里有11张桌子，其中一张是讲桌，能坐下40人左右。送走了阿訇，伴随着疲惫，我也很快进入了梦想。    晨礼下来后，又睡着了。起来已经是七点半了，问了一下阿訇，让我们上午先休息休息，下午再去家访进行招生。坐不住的我们，在奥雪和紫优还有其他小朋友的带领下出去在村子里转了转。</p>
+<p>  <img src="./images/自有.jpg" alt="enter description here" title="怕我热，折下树叶给我遮阳的紫优"></p>
+<p>说起是村子，却也没住着几户人家。这里地形是靠山，村子的形成是在两座大山的缝隙里蜿蜒形成的，有一条硬化路，随着地形在不远的尽头也看不到头了。我们先是沿着路走了离寺不远的几十米，身边的小朋友告诉我，我们不能再往下走了，我问为什么，小朋友告诉我，再往下走就是汉族的村庄了。寺管大哥家是沿路最后一家，和不远处的汉族村子相距40几米的样子。遇到了寺管大哥，叫我们进去坐一坐，想着不给人家找麻烦了，就在路口我们聊了聊，寺管大哥告诉我，这里主要农作物就是土豆和玉米。田地也不是很多，全部在山坡上，“支离破碎”。每家的年轻劳动力基本都是出去外面打工了，只留下几间略显荒凉又有点破旧的房屋坐立在山坡上。</p>
+<p><img src="./images/192978519.jpg" alt="enter description here" title="屋子有人住，一头牛，两三只鸡"><br>大哥在教门上是一个很有上进心和思想的人。以前这里的人们近乎达到了野蛮的状态，我当时并不明白这个野蛮是一种什么样的野蛮，后面大哥告诉我，以前村子里的人经常去隔壁村子闹事，那里的汉族都怀有了一种敌意和敬畏之心。但是后来改变了，那个村子里的人们开始说，你们村子里的那些人为什么这些年不见了。叔叔告诉我，这是因为真理来到了这个地方，自从1998年建立了这座清真寺后，这里的人们就开始慢慢改变了，他们知道了人生存在的意义，就是要劝人行善，止人作恶…。感赞，这里的人们得到了主的引领。</p>
+<p><img src="./images/奖状.jpg" alt="enter description here" title="奖状"><br>聊了一会儿我们便开始回去了，在回去的路上，看到了一位大叔在修双轮拉灰车，我过去说了一句赛俩目，他并没有给我回复，只是看着我笑了笑。屋子里出来了马关丹的妈妈，刚才那位是马关丹的爸爸。马关丹是一位脚上有残疾的女孩子，一直不说话，只是跟着我们一起在后面走着，后来阿訇家的女儿告诉我，她的脚是因为小时候上台阶的时候摔了，她妈妈没有给她看病，所以成了现在的样子，当时的我心里还在想这位妈妈好狠心呀。后来她妈妈从屋子里出来时，我说了一句赛俩目，她妈妈也回复了我。在交谈中，还是有语言障碍的，说的基本听不懂，只有根据话里的一些词去判断她说的是哪方面的内容。她们家的房子很破很破，因为这几天下雨的缘故，我都感觉快塌了。屋外也没有什么大面积的院子，只有一条从硬化路到家门口的一个小路，和家门口到山脚下牛棚里的一条路，有2头牛，还有一些鸡。聊着聊着，我才知道这个家庭的命运也多苦了，我无法得知她说的全部内容，但是她说着说着便开始哽咽，眼睛中有泪花在打转。她告诉我她有时候都不想再活着这个世上了，不知道还有什么要活得，我知道这个家庭很不幸，她已经承受了很多很多。</p>
+<p><img src="./images/2072055380.jpg" alt="enter description here" title="争先枪后的要洗碗"><br>生了2个儿子，全部夭折了，一个女儿腿脚上还留下了残疾，丈夫他也给我说了，但是没有听懂，但是可以判定家长的劳动力几乎是他一个人。种着几亩田地，一年下来也才能收获2000元上下。只够养活这个家，她告诉我自己47岁了，但我从她的脸上却看到了60几岁老人的模样，俨然不像她说的那个年龄，但是女儿却也只有10岁。最后她说，感赞，我们都还活着。马关丹戴着头巾，一直默默的跟在我们的身后。</p>
+<p><img src="./images/721101599.jpg" alt="enter description here" title="孩子在看自己喜欢书"><br>我听着内心很沉重，回到了寺里，师娘叫着吃饭呢。</p>
+<p>下午做完pieshi，我们就在阿訇家子女的带领下去家访，其实也没有走几家，大多数家中都是老人，或者门早已紧闭，荒草丛生。</p>
+<p>不一会儿我们便又采访回到了原点，师娘又叫我们吃饭。早晨都是沿着路超着山下坡方向去看了看，下午沿着山坡向上走去采访，这里的房屋大多数都是两种建筑，一种是土墙房子，没有窗口那种，感觉和窑洞一样，一种是二层平顶瓦房，之所以是二层平顶瓦房，我想是因为地理原因，这里平地面积少之又少，靠天吃饭，平顶可以把上面的水全部收集。</p>
+<p><img src="./images/1130664459.jpg" alt="enter description here" title="热爱生命是一种生活态度"><br>我们的旁边只有一家商店，标准的来讲，是小买铺，是陈奥雪家开的，下午她才告诉我，她们家也即将要搬走了，在城里已经租好了房子，她妈妈在城里可以买杂货，她在城里上学。之所以她告诉我这个消息，是因为我想买一些作业本和画画本，想让孩子们尝试每天写日记，问了一下奥雪说她们家也没有什么本子了。这里没有进城的公交，有的只是绵延的那条仅有的硬化路，和路旁边的马粪和牛粪，因为在半山腰耕地要用到牛和马。想刷个牙，却只拿了牙膏，想买都没有个去处，只好洗小净时多洗洗牙。</p>
+<p><img src="./images/1963889052.jpg" alt="enter description here" title="喜爱他们"><br>总有一些人，连我们习以为常的东西都是一种奢侈，不论什么。但是他们却各个善良热情，虽然也有生活的疲惫，但从内心里，爱也是人的一种天性。明天要开课了，不知道能来多少个像奥雪紫优这样懂事又可爱的孩子，但我们希望他们都能来。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/生活/" rel="tag"><i class="fa fa-tag"></i> 生活</a>
+          
+            <a href="/tags/支教/" rel="tag"><i class="fa fa-tag"></i> 支教</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
         
-        
+
         
 
         
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
           </div>
         
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/07/22/关于这里，三家寨的风土人情/" itemprop="url">
-              
-                <span itemprop="name">初探 JVM 垃圾收集器和内存分配策略</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-07-22T00:00:00+08:00"
-              content="2018-07-22" >
-          07-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+        </div>
+      
       
 
+<div>
+      
         
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/05/13/面试后想对你说/" itemprop="url">
-              
-                <span itemprop="name">面试后想对你说</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-05-13T00:00:00+08:00"
-              content="2018-05-13" >
-          05-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
 
       
+</div>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/13/面试后想对你说/" rel="next" title="面试后想对你说">
+                <i class="fa fa-chevron-left"></i> 面试后想对你说
+              </a>
+            
+          </div>
 
-        
-        
-        
+          <span class="post-nav-divider"></span>
 
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/18/记百度-Java-实习第二面/" itemprop="url">
-              
-                <span itemprop="name">记百度 Java 实习第二面</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-18T00:00:00+08:00"
-              content="2018-04-18" >
-          04-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/16/记百度-Java-实习第一面/" itemprop="url">
-              
-                <span itemprop="name">记百度 Java 实习第一面</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-16T00:00:00+08:00"
-              content="2018-04-16" >
-          04-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/10/记阿里巴巴-Java-实习第一面/" itemprop="url">
-              
-                <span itemprop="name">记阿里巴巴 Java 实习第一面</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-10T00:00:00+08:00"
-              content="2018-04-10" >
-          04-10
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/09/再看-JVM-的类加载机制/" itemprop="url">
-              
-                <span itemprop="name">再看 JVM 的类加载机制</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-09T00:00:00+08:00"
-              content="2018-04-09" >
-          04-09
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/08/初探-JVM-垃圾收集器和内存分配策略/" itemprop="url">
-              
-                <span itemprop="name">初探 JVM 垃圾收集器和内存分配策略</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-08T00:00:00+08:00"
-              content="2018-04-08" >
-          04-08
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/07/初探-Java-的内存模型/" itemprop="url">
-              
-                <span itemprop="name">初探 Java 的内存模型</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-07T00:00:00+08:00"
-              content="2018-04-07" >
-          04-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/04/05/一道题看清-JVM-的类加载机制/" itemprop="url">
-              
-                <span itemprop="name">一道题看清 JVM 的类加载机制</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-05T00:00:00+08:00"
-              content="2018-04-05" >
-          04-05
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-    </div>
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -672,6 +553,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -931,6 +816,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v="></script>
+<script type="text/javascript" src="/js/src/post-details.js?v="></script>
+
+
 
   
 
