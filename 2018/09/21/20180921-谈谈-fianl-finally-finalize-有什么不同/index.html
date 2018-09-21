@@ -79,6 +79,7 @@
 
 
 
+  <meta name="keywords" content="Java基础,面试常见题," />
 
 
 
@@ -88,16 +89,19 @@
 
 
 
-<meta name="description" content="生活的最佳状态便是冷冷清清的风风火火">
-<meta property="og:type" content="website">
-<meta property="og:title" content="StormWangxhu&#39; s blog">
-<meta property="og:url" content="https://stormwangxhu.github.io/tags/Java-内存模型/index.html">
+
+<meta name="description" content="一道 Java经典的基础题目：  谈谈 fianl finally finalize 有什么不同  典型回答 final：  final 可以用来修饰类、方法、变量，分别有不同的意思。 （1）、修饰类：修饰的class代表不可以继承拓展 （2）、修饰方法：修饰的方法不可以重写（override） （3）、修饰变量：修饰的变量是不可以被修改的   finally  finally 是java">
+<meta name="keywords" content="Java基础,面试常见题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="谈谈 fianl finally finalize 有什么不同">
+<meta property="og:url" content="https://stormwangxhu.github.io/2018/09/21/20180921-谈谈-fianl-finally-finalize-有什么不同/index.html">
 <meta property="og:site_name" content="StormWangxhu&#39; s blog">
-<meta property="og:description" content="生活的最佳状态便是冷冷清清的风风火火">
+<meta property="og:description" content="一道 Java经典的基础题目：  谈谈 fianl finally finalize 有什么不同  典型回答 final：  final 可以用来修饰类、方法、变量，分别有不同的意思。 （1）、修饰类：修饰的class代表不可以继承拓展 （2）、修饰方法：修饰的方法不可以重写（override） （3）、修饰变量：修饰的变量是不可以被修改的   finally  finally 是java">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-09-21T13:30:24.027Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="StormWangxhu&#39; s blog">
-<meta name="twitter:description" content="生活的最佳状态便是冷冷清清的风风火火">
+<meta name="twitter:title" content="谈谈 fianl finally finalize 有什么不同">
+<meta name="twitter:description" content="一道 Java经典的基础题目：  谈谈 fianl finally finalize 有什么不同  典型回答 final：  final 可以用来修饰类、方法、变量，分别有不同的意思。 （1）、修饰类：修饰的class代表不可以继承拓展 （2）、修饰方法：修饰的方法不可以重写（override） （3）、修饰变量：修饰的变量是不可以被修改的   finally  finally 是java">
 
 
 
@@ -127,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://stormwangxhu.github.io/tags/Java-内存模型/"/>
+  <link rel="canonical" href="https://stormwangxhu.github.io/2018/09/21/20180921-谈谈-fianl-finally-finalize-有什么不同/"/>
 
 
 
 
 
-  <title>标签: Java 内存模型 | StormWangxhu' s blog</title>
+  <title>谈谈 fianl finally finalize 有什么不同 | StormWangxhu' s blog</title>
   
 
 
@@ -162,7 +166,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -301,54 +305,287 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Java 内存模型<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://stormwangxhu.github.io/2018/09/21/20180921-谈谈-fianl-finally-finalize-有什么不同/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="StormWangxhu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avator.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="StormWangxhu' s blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/04/07/初探-Java-的内存模型/" itemprop="url">
-              
-                <span itemprop="name">初探 Java 的内存模型</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">谈谈 fianl finally finalize 有什么不同</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-07T00:00:00+08:00"
-              content="2018-04-07" >
-          04-07
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-21T00:00:00+08:00">
+                2018-09-21
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/总结/" itemprop="url" rel="index">
+                    <span itemprop="name">总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>   一道 Java经典的基础题目：</p>
+<blockquote>
+<p>谈谈 fianl finally finalize 有什么不同</p>
+</blockquote>
+<h2 id="典型回答"><a href="#典型回答" class="headerlink" title="典型回答"></a>典型回答</h2><ul>
+<li><p>final：</p>
+<blockquote>
+<p>final 可以用来修饰类、方法、变量，分别有不同的意思。</p>
+<p>（1）、修饰类：修饰的class代表不可以继承拓展</p>
+<p>（2）、修饰方法：修饰的方法不可以重写（override）</p>
+<p>（3）、修饰变量：修饰的变量是不可以被修改的</p>
+</blockquote>
+</li>
+<li><p>finally</p>
+<blockquote>
+<p>finally 是java 用来保证重点代码一定要被被执行的一种机制。我们可以使用 try-finally 或者 try-catch-finally 来进行类似关闭 JDBC 连接、保证 unlock 锁等动作。 </p>
+</blockquote>
+</li>
+<li><p>finalize</p>
+<blockquote>
+<p>finalize 是基础类 java.lang.Object 的一个方法，他的设计目的是保证对象在被垃圾收集前完成资源的回收。finalize 机制现在已经不推荐使用，并且在 JDK 9 开始被标记为 deprecated。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="考点分析"><a href="#考点分析" class="headerlink" title="考点分析"></a>考点分析</h2><p>这是一道非常经典的 Java 基础问题，上面的回答主要是从语法和实践角度出发的，其实还有很多方面可以深入探讨，面试官还可以考察我们对性能、并发、对象生命周期或垃圾收集基本过程的方面的理解。</p>
+<p>推荐使用 <code>final</code> 关键词来明确表示我们代码的语义、逻辑意图，这已经证明在许多场景下是非常好的实践，比如：</p>
+<ul>
+<li>我们可以选择将方法或者类声明为 <code>final</code>,这样就可以明确告诉别人，这些行为是不允许修改的。</li>
+</ul>
+<p>在 Java 许多的类库中定义的源码，在 <code>java.lang</code> 包下的很多类，相当一部分都被声明为 <code>final class ?</code> 在第三方类库的一些基础类中同样如此，这样可以有效避免API使用者更改基础功能，某种程度上，这是保证平台安全的必要手段。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java基础/" rel="tag"><i class="fa fa-tag"></i> Java基础</a>
+          
+            <a href="/tags/面试常见题/" rel="tag"><i class="fa fa-tag"></i> 面试常见题</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+<div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2018/09/21/20180921-谈谈-fianl-finally-finalize-有什么不同/">谈谈 fianl finally finalize 有什么不同</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 StormWangxhu 的个人博客">StormWangxhu</a></p>
+  <p><span>发布时间:</span>2018年09月21日 - 00:09</p>
+  <p><span>最后更新:</span>2018年09月21日 - 21:09</p>
+  <p><span>原始链接:</span><a href="/2018/09/21/20180921-谈谈-fianl-finally-finalize-有什么不同/" title="谈谈 fianl finally finalize 有什么不同">https://stormwangxhu.github.io/2018/09/21/20180921-谈谈-fianl-finally-finalize-有什么不同/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://stormwangxhu.github.io/2018/09/21/20180921-谈谈-fianl-finally-finalize-有什么不同/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
+
+      
+</div>
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/22/关于这里，三家寨的风土人情/" rel="next" title="关于这里，三家寨的风土人情">
+                <i class="fa fa-chevron-left"></i> 关于这里，三家寨的风土人情
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -356,6 +593,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -376,8 +617,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -451,6 +701,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#典型回答"><span class="nav-number">1.</span> <span class="nav-text">典型回答</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#考点分析"><span class="nav-number">2.</span> <span class="nav-text">考点分析</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -615,6 +881,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v="></script>
+<script type="text/javascript" src="/js/src/post-details.js?v="></script>
+
+
 
   
 
