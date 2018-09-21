@@ -98,7 +98,7 @@
 <meta property="og:site_name" content="StormWangxhu&#39; s blog">
 <meta property="og:description" content="一道 Java经典的基础题目：  谈谈 fianl finally finalize 有什么不同  典型回答 final：  final 可以用来修饰类、方法、变量，分别有不同的意思。 （1）、修饰类：修饰的class代表不可以继承拓展 （2）、修饰方法：修饰的方法不可以重写（override） （3）、修饰变量：修饰的变量是不可以被修改的   finally  finally 是java">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-21T13:30:24.027Z">
+<meta property="og:updated_time" content="2018-09-21T14:19:21.808Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="谈谈 fianl finally finalize 有什么不同">
 <meta name="twitter:description" content="一道 Java经典的基础题目：  谈谈 fianl finally finalize 有什么不同  典型回答 final：  final 可以用来修饰类、方法、变量，分别有不同的意思。 （1）、修饰类：修饰的class代表不可以继承拓展 （2）、修饰方法：修饰的方法不可以重写（override） （3）、修饰变量：修饰的变量是不可以被修改的   finally  finally 是java">
@@ -469,12 +469,24 @@
 </li>
 </ul>
 <h2 id="考点分析"><a href="#考点分析" class="headerlink" title="考点分析"></a>考点分析</h2><p>这是一道非常经典的 Java 基础问题，上面的回答主要是从语法和实践角度出发的，其实还有很多方面可以深入探讨，面试官还可以考察我们对性能、并发、对象生命周期或垃圾收集基本过程的方面的理解。</p>
-<p>推荐使用 <code>final</code> 关键词来明确表示我们代码的语义、逻辑意图，这已经证明在许多场景下是非常好的实践，比如：</p>
+<h3 id="final"><a href="#final" class="headerlink" title="final"></a>final</h3><p>推荐使用 <code>final</code> 关键词来明确表示我们代码的语义、逻辑意图，这已经证明在许多场景下是非常好的实践，比如：</p>
 <ul>
 <li>我们可以选择将方法或者类声明为 <code>final</code>,这样就可以明确告诉别人，这些行为是不允许修改的。</li>
 </ul>
 <p>在 Java 许多的类库中定义的源码，在 <code>java.lang</code> 包下的很多类，相当一部分都被声明为 <code>final class ?</code> 在第三方类库的一些基础类中同样如此，这样可以有效避免API使用者更改基础功能，某种程度上，这是保证平台安全的必要手段。</p>
-
+<ul>
+<li>使用 <code>final</code> 修饰参数或者变量，也可以很清楚地避免意外赋值导致的编程错误，甚至，有人明确推荐将所有的方法参数、本地变量、成员变量声明为 <code>final</code> 。</li>
+<li><code>final</code> 变量产生了某种程度的不可变（immutable）的效果，所以，<strong>可以用与保护只读数据</strong> ，尤其是在并发编程中，因为明确地不能再赋值 <code>final</code> 变量，有利于减少额外的同步开销，也可以省去一些防御性拷贝的需要。</li>
+</ul>
+<p><code>final</code> 也许会有性能的好处，很多文章或者书籍中都介绍了可在特定场景中提高性能，比如，利用<code>final</code> 有助于<code>JVM</code> 将方法进行内联，可以改善编译器进行条件编译的能力等等。坦白说，很多类似的结论都是基于假设得出的，比如现代高性能<code>JVM</code> （如HotSpot）判断内联未必依赖<code>final</code> 的提示，要相信<code>JVM</code> 还是非常智能的。类似的，<code>final</code> 字段对性能的硬影响，大部分情况下，并没有考虑的必要。</p>
+<h3 id="finally"><a href="#finally" class="headerlink" title="finally"></a>finally</h3><p>对于<code>finally</code> ，明确的知道怎么使用就足够。需要关闭的连接等资源，更推荐使用 <code>Java7</code>  中添加的 <code>try-catch-resource</code>语句，因为通常<code>Java</code> 能够很好的处理异常情况，编码量也要少很多。何乐而不为？</p>
+<p>另外我们要注意一些常被考到的 <code>finally</code> 问题（也比较偏门），至少需要了解以下。比如，下面的代码会输出什么？</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    <span class="comment">//do something</span></span><br><span class="line">    System.exit(<span class="number">1</span>);</span><br><span class="line">&#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"Print from finally"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>上面的<code>finally</code> 里面的代码可不会被执行哦，这是一个特例。</p>
+<h3 id="finalize"><a href="#finalize" class="headerlink" title="finalize"></a>finalize</h3><p>对于<code>finallize</code> ，我们要明确它是不推荐使用的，业界实践一再证明他不是个好的办法，在<code>Java 9</code> 中，甚至明确将<code>Object.finalize()</code> 标记为 <code>deprecated</code> ！如果没有特别的原因，不要实现<code>finalize()</code> 方法，也不要指望利用它来进行资源回收。</p>
+<p>为什么呢？简单说，你无法保证<code>finalize()</code> 什么时候执行，执行的是否符合预期。使用不当会影响性能，导致程序死锁、挂起等。</p>
+<p>通常来说，利用上面的提到的<code>try-with-resource</code> 或者<code>try-finally</code> 机制，是非常好的回收资源的办法。如果确实需要额外处理，可以考虑<code>Java</code> 提供的<code>Cleaner</code> 机制或者其他的替代方法。接下来，我们介绍更多的设计考虑和实现细节。</p>
+<h2 id="知识拓展"><a href="#知识拓展" class="headerlink" title="知识拓展"></a>知识拓展</h2>
       
     </div>
     
@@ -529,7 +541,7 @@
   <p><span>本文标题:</span><a href="/2018/09/21/20180921-谈谈-fianl-finally-finalize-有什么不同/">谈谈 fianl finally finalize 有什么不同</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 StormWangxhu 的个人博客">StormWangxhu</a></p>
   <p><span>发布时间:</span>2018年09月21日 - 00:09</p>
-  <p><span>最后更新:</span>2018年09月21日 - 21:09</p>
+  <p><span>最后更新:</span>2018年09月21日 - 22:09</p>
   <p><span>原始链接:</span><a href="/2018/09/21/20180921-谈谈-fianl-finally-finalize-有什么不同/" title="谈谈 fianl finally finalize 有什么不同">https://stormwangxhu.github.io/2018/09/21/20180921-谈谈-fianl-finally-finalize-有什么不同/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://stormwangxhu.github.io/2018/09/21/20180921-谈谈-fianl-finally-finalize-有什么不同/"  aria-label="复制成功！"></i></span>
   </p>
@@ -711,7 +723,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#典型回答"><span class="nav-number">1.</span> <span class="nav-text">典型回答</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#考点分析"><span class="nav-number">2.</span> <span class="nav-text">考点分析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#典型回答"><span class="nav-number">1.</span> <span class="nav-text">典型回答</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#考点分析"><span class="nav-number">2.</span> <span class="nav-text">考点分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#final"><span class="nav-number">2.1.</span> <span class="nav-text">final</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#finally"><span class="nav-number">2.2.</span> <span class="nav-text">finally</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#finalize"><span class="nav-number">2.3.</span> <span class="nav-text">finalize</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识拓展"><span class="nav-number">3.</span> <span class="nav-text">知识拓展</span></a></li></ol></div>
             
 
           </div>
