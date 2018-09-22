@@ -98,7 +98,7 @@
 <meta property="og:site_name" content="StormWangxhu&#39; s blog">
 <meta property="og:description" content="一道 Java经典的基础题目：  谈谈 fianl finally finalize 有什么不同  典型回答 final：  final 可以用来修饰类、方法、变量，分别有不同的意思。 （1）、修饰类：修饰的class代表不可以继承拓展 （2）、修饰方法：修饰的方法不可以重写（override） （3）、修饰变量：修饰的变量是不可以被修改的   finally  finally 是java">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-21T14:19:21.808Z">
+<meta property="og:updated_time" content="2018-09-22T06:39:57.486Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="谈谈 fianl finally finalize 有什么不同">
 <meta name="twitter:description" content="一道 Java经典的基础题目：  谈谈 fianl finally finalize 有什么不同  典型回答 final：  final 可以用来修饰类、方法、变量，分别有不同的意思。 （1）、修饰类：修饰的class代表不可以继承拓展 （2）、修饰方法：修饰的方法不可以重写（override） （3）、修饰变量：修饰的变量是不可以被修改的   finally  finally 是java">
@@ -486,7 +486,30 @@
 <h3 id="finalize"><a href="#finalize" class="headerlink" title="finalize"></a>finalize</h3><p>对于<code>finallize</code> ，我们要明确它是不推荐使用的，业界实践一再证明他不是个好的办法，在<code>Java 9</code> 中，甚至明确将<code>Object.finalize()</code> 标记为 <code>deprecated</code> ！如果没有特别的原因，不要实现<code>finalize()</code> 方法，也不要指望利用它来进行资源回收。</p>
 <p>为什么呢？简单说，你无法保证<code>finalize()</code> 什么时候执行，执行的是否符合预期。使用不当会影响性能，导致程序死锁、挂起等。</p>
 <p>通常来说，利用上面的提到的<code>try-with-resource</code> 或者<code>try-finally</code> 机制，是非常好的回收资源的办法。如果确实需要额外处理，可以考虑<code>Java</code> 提供的<code>Cleaner</code> 机制或者其他的替代方法。接下来，我们介绍更多的设计考虑和实现细节。</p>
-<h2 id="知识拓展"><a href="#知识拓展" class="headerlink" title="知识拓展"></a>知识拓展</h2>
+<h2 id="知识拓展"><a href="#知识拓展" class="headerlink" title="知识拓展"></a>知识拓展</h2><h3 id="关于final"><a href="#关于final" class="headerlink" title="关于final"></a>关于final</h3><p>注意：<code>final</code>   不是<code>immutable</code>!</p>
+<p>前面介绍了final在实践中的好处，需要注意的是，<code>final</code> 并不等于<code>immutable</code> ，比如下面这段代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> List&lt;String&gt; strList = <span class="keyword">new</span> ArrayList();</span><br><span class="line">strList.add(<span class="string">"1"</span>);</span><br><span class="line">strList.add(<span class="string">"2"</span>);</span><br><span class="line">strList.add(<span class="string">"3"</span>);</span><br><span class="line">List&lt;String&gt; unmodifiableList = List.of(<span class="string">"1"</span>,<span class="string">"2"</span>);</span><br><span class="line">unmodifiableList.add(<span class="string">"3"</span>); <span class="comment">//运行时会报错</span></span><br></pre></td></tr></table></figure>
+<p><code>final</code> 只能约束<code>strList</code> 这个引用不可以被赋值，但是<code>strList</code> 对象行为不被 <code>final</code> 影响，添加元素等操作完全是正常的。如果我们真的希望对象本身是不变的，那么需要相应的类支持不可变的行为，在上面的例子中，<code>List.of()</code> 方法创建的本身就是不可变的<code>List</code> ，最后这句<code>add（）</code> 是会在运行期间抛出异常的。在<code>Java9</code>中Lis新特性中<code>List.of()</code> 源码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> &lt;E&gt; <span class="function">List&lt;E&gt; <span class="title">of</span><span class="params">(E e1, E e2, E e3)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> ImmutableCollections.ListN&lt;&gt;(e1, e2, e3);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>ImmutableCollections</code> 的源码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ListN(E... input)&#123;</span><br><span class="line">    E[] tmp = (E[])<span class="keyword">new</span> Object[input.length];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">0</span>;i&lt;input.length;i++)&#123;</span><br><span class="line">        tmp[i] = Object.requireNonNull(input[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">this</span>.elements=tmp ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在<code>new Object(input.length)</code> 中，已经将添加的长度定死了。</p>
+<p><code>immutable</code> 在很多场景中是非常棒的选择，某种意义上说，<code>Java</code> 语言目前并没有原生的不可变支持，如果要实现<code>immutable</code> 的类，我们需要做到：</p>
+<ul>
+<li>将<code>class</code>自身声明为<code>final</code> ，这样别人就不能拓展绕过限制了。</li>
+<li>将所有成员变量定义为<code>private</code> 和<code>final</code> ，并且不要实现<code>setter</code> 方法。</li>
+<li>通常构造对象时，成员变量使用深度拷贝来初始化，而不是直接赋值，这是一种防御措施，因为你无法确定输入对象不被其他人修改。</li>
+<li>如果确实需要实现<code>getter</code> 方法，或者其他可能返回内部状态的方法，使用<code>copy-on-write</code> 原则，创建私有的<code>copy</code> 。</li>
+</ul>
+<p>这些原则在并发编程实践中也经常被用到。关于<code>setter</code> 和<code>getter</code> 方法，很多人喜欢直接用<code>IDE</code> 一次全部生成，建议最好是需要时有需要时再实现。</p>
+<h3 id="关于finalize"><a href="#关于finalize" class="headerlink" title="关于finalize"></a>关于finalize</h3><p><code>finalize</code> 真的那么不堪？</p>
+<p>前面简单介绍了<code>finalize</code> 是一种已经被业界证明了不好的实践，那么为什么会导致那些问题呢？</p>
+<p><code>finalize</code> 的执行是和垃圾收集关联在一起的，一旦实现了非空的<code>finalize</code> 方法，就会导致相应对象回收呈数量级上的变慢，有人专门做过<code>benchmark</code> ，大概是40~50倍的下降。</p>
+<p>因为<code>finalize</code> 被设计成在对象收集前调用，这就意外着实现<code>fianlize</code>方法的对象是个“特殊公民”。<code>JVM</code> 要对它进行额外的处理。<code>finalize</code> 本质上成为快速回收的阻碍者，可能导致你的对象经过垃圾收集周期才会被回收。</p>
+<p>实践中，因为<code>finalize</code> 拖慢垃圾收集，导致大量的对象堆积，也是一种导致<code>OOM</code> 的原因。</p>
+<p>从另外一个角度，我们要确保回收资源就是因为资源是有限的，垃圾收集时间的不可预测，可能会极大的家具资源占用。这意外着对于消耗非常高频的资源，千万别指望着<code>finalize</code> 作为最后的“守门员”，况且他已经暴露了如此多的问题。所以，用完资源推荐显示释放，或者利用资源池尽量重用。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>今天，我们从语法角度分析了<code>final</code> 、<code>finally</code> 、<code>finalize</code> ，并且从安全、性能、垃圾收集等方面逐步深入，探讨实践中的注意事项。</p>
+
       
     </div>
     
@@ -541,7 +564,7 @@
   <p><span>本文标题:</span><a href="/2018/09/21/20180921-谈谈-fianl-finally-finalize-有什么不同/">谈谈 fianl finally finalize 有什么不同</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 StormWangxhu 的个人博客">StormWangxhu</a></p>
   <p><span>发布时间:</span>2018年09月21日 - 00:09</p>
-  <p><span>最后更新:</span>2018年09月21日 - 22:09</p>
+  <p><span>最后更新:</span>2018年09月22日 - 14:09</p>
   <p><span>原始链接:</span><a href="/2018/09/21/20180921-谈谈-fianl-finally-finalize-有什么不同/" title="谈谈 fianl finally finalize 有什么不同">https://stormwangxhu.github.io/2018/09/21/20180921-谈谈-fianl-finally-finalize-有什么不同/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://stormwangxhu.github.io/2018/09/21/20180921-谈谈-fianl-finally-finalize-有什么不同/"  aria-label="复制成功！"></i></span>
   </p>
@@ -723,7 +746,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#典型回答"><span class="nav-number">1.</span> <span class="nav-text">典型回答</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#考点分析"><span class="nav-number">2.</span> <span class="nav-text">考点分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#final"><span class="nav-number">2.1.</span> <span class="nav-text">final</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#finally"><span class="nav-number">2.2.</span> <span class="nav-text">finally</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#finalize"><span class="nav-number">2.3.</span> <span class="nav-text">finalize</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识拓展"><span class="nav-number">3.</span> <span class="nav-text">知识拓展</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#典型回答"><span class="nav-number">1.</span> <span class="nav-text">典型回答</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#考点分析"><span class="nav-number">2.</span> <span class="nav-text">考点分析</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#final"><span class="nav-number">2.1.</span> <span class="nav-text">final</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#finally"><span class="nav-number">2.2.</span> <span class="nav-text">finally</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#finalize"><span class="nav-number">2.3.</span> <span class="nav-text">finalize</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#知识拓展"><span class="nav-number">3.</span> <span class="nav-text">知识拓展</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关于final"><span class="nav-number">3.1.</span> <span class="nav-text">关于final</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于finalize"><span class="nav-number">3.2.</span> <span class="nav-text">关于finalize</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
