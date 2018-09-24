@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[String StringBuffer StringBuilder 有什么区别]]></title>
+    <url>%2F2018%2F09%2F24%2FString-StringBuffer-StringBuilder-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>面试常见题</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[int 和 Integer 有什么区别]]></title>
+    <url>%2F2018%2F09%2F23%2Fint-%E5%92%8C-Integer-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%2F</url>
+    <content type="text"><![CDATA[Java 虽然号称是面向对象的语言，但是原始数据类型仍然是重要的组成元素，所以在面试中，经常考察原始数据类型和包装等Java 语言特性。 今天一起看看： int 和Integer 有什么区别？谈谈Integer 的值的缓存范围。 典型回答 int int 是我们常说的整形数字，是Java 的8个原始数据类型（boolean、byte、short、char、int、float、double、long）之一。Java 语言虽然号称一切都是对象，但是原始数据类型是例外。 Integer Integer 是int 对应的包装类，它有一个int 类型的字段存储数据，并且提供了基本操作，比如数学运算、int 和字符串之间的转换等。在Java5 中，引入了自动装箱和自动拆箱功能（boxing/unboxing），Java 可以根据上下文，自动进行转换，极大地简化了相关编程。 Integer 缓存 关于Integer缓存，这设计到Java5 中另一个改进。构建Integer 对象的传统方式是直接调用构造器，直接new 一个对象。但是根据实践，我们发现大部分数据操作都是集中在有限的、较小的数值范范围，因而，在Java5 中新增了静态工厂方法valueOf ，在调用它的时候会利用一个缓存机制，带来明显的性能改进。按照Javadoc 这个值默认缓存是[-128,127]之间。 考点分析今天的问题涵盖了Java 里两个基础要素：原始数据类型、包装类。谈到这里，就可以非常自然的拓展到自动装箱、自动拆箱机制，进而考察封装类的一些设计和实践。坦白说，理解基本原理和用法已经足够日常工作需求了，但是要落实到具体场景，还是有很多问题需要仔细思考才能确定的。 比如： Java 使用的不同阶段，编译阶段、运行时，自动装箱/自动拆箱是发生在什么阶段？ 静态工厂方法valueOf 会使用到缓存机制，那么自动装箱的时候，缓存机制起作用吗? 为什么我们需要原始数据类型，Java 的对象似乎也很高效，应用中具体会产生哪些差异？ 阅读过Integer 源码吗？分析一下类或者某些方法的设计要点。 知识拓展理解自动装箱、拆箱自动装箱实际上算是一种语法糖。 什么是语法糖？可以简单理解为Java 平台为我们自动进行了一些转换，保证不同的写法在运行时等价，它发生在编译阶段，也就是生成的字节码是一致的。 像前面提到的整数，javac 替我们自动把装箱转换为 Integer.valueOf() ,把拆箱替换为Integer.intValue() ，这似乎也顺序回答了另一个问题，既然调用的是Integer.valueOf ,自然能够得到缓存的好处了。]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>Java基础</tag>
+        <tag>面试常见题</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[对比 Hashtable HashMap TreeMap 有什么不同]]></title>
     <url>%2F2018%2F09%2F22%2F%E5%AF%B9%E6%AF%94-Hashtable-HashMap-TreeMap-%E6%9C%89%E4%BB%80%E4%B9%88%E4%B8%8D%E5%90%8C%2F</url>
     <content type="text"></content>
