@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://stormwangxhu.github.io/about/index.html</loc>
+    
+    <lastmod>2018-09-24T07:25:43.987Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://stormwangxhu.github.io/2018/09/23/int-%E5%92%8C-Integer-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</loc>
     
     <lastmod>2018-09-24T07:15:56.910Z</lastmod>
@@ -96,13 +103,6 @@
     <loc>https://stormwangxhu.github.io/categories/index.html</loc>
     
     <lastmod>2018-09-19T03:16:20.973Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://stormwangxhu.github.io/about/index.html</loc>
-    
-    <lastmod>2018-09-19T03:16:01.301Z</lastmod>
     
   </url>
   
