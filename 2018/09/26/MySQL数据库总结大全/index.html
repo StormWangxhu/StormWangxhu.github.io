@@ -79,7 +79,7 @@
 
 
 
-  <meta name="keywords" content="实习," />
+  <meta name="keywords" content="MySQL总结,B+树," />
 
 
 
@@ -90,18 +90,18 @@
 
 
 
-<meta name="description" content="我看好自己的认真！   前言炎热的下午，刚在体育课上测完了一千米，嗓子要着火了，跑完后感觉要膨胀了，又测了50、身高、肺活量、体前屈。测完后就在树荫下休息，离下课还有10分钟的时候，口袋里的手机突然想起，拿起一看，阿里巴巴集团，当时就意识到可能是要和我商量面试时间，但接了后，却和其他公司不一样，面试官直接就问我，有时间吗？我们简单面试一下。我看了看体育老师，过去请了个假，就赶紧去一边面试了，不知">
-<meta name="keywords" content="实习">
+<meta name="description" content="前言本篇博客给出关于数据库MySQL的总结，很不错。 链接1.1  InnoDB记录存储结构InnoDB记录存储结构 1.2  InnoDB数据页结构InnoDB数据页结构 1.3 MySQL 命令执行过程和存储引擎概述MySQL 命令执行过程和存储引擎概述 1.4  MySQL 索引(上)MySQL索引(基础原理)&amp;amp;version=12020810&amp;amp;nettype=WIFI&amp;am">
+<meta name="keywords" content="MySQL总结,B+树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记阿里巴巴 Java 实习第一面">
-<meta property="og:url" content="https://stormwangxhu.github.io/2018/04/10/记阿里巴巴-Java-实习第一面/index.html">
+<meta property="og:title" content="MySQL数据库总结大全">
+<meta property="og:url" content="https://stormwangxhu.github.io/2018/09/26/MySQL数据库总结大全/index.html">
 <meta property="og:site_name" content="StormWangxhu&#39;s blog">
-<meta property="og:description" content="我看好自己的认真！   前言炎热的下午，刚在体育课上测完了一千米，嗓子要着火了，跑完后感觉要膨胀了，又测了50、身高、肺活量、体前屈。测完后就在树荫下休息，离下课还有10分钟的时候，口袋里的手机突然想起，拿起一看，阿里巴巴集团，当时就意识到可能是要和我商量面试时间，但接了后，却和其他公司不一样，面试官直接就问我，有时间吗？我们简单面试一下。我看了看体育老师，过去请了个假，就赶紧去一边面试了，不知">
+<meta property="og:description" content="前言本篇博客给出关于数据库MySQL的总结，很不错。 链接1.1  InnoDB记录存储结构InnoDB记录存储结构 1.2  InnoDB数据页结构InnoDB数据页结构 1.3 MySQL 命令执行过程和存储引擎概述MySQL 命令执行过程和存储引擎概述 1.4  MySQL 索引(上)MySQL索引(基础原理)&amp;amp;version=12020810&amp;amp;nettype=WIFI&amp;am">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-11T03:44:40.514Z">
+<meta property="og:updated_time" content="2018-09-26T14:18:18.399Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记阿里巴巴 Java 实习第一面">
-<meta name="twitter:description" content="我看好自己的认真！   前言炎热的下午，刚在体育课上测完了一千米，嗓子要着火了，跑完后感觉要膨胀了，又测了50、身高、肺活量、体前屈。测完后就在树荫下休息，离下课还有10分钟的时候，口袋里的手机突然想起，拿起一看，阿里巴巴集团，当时就意识到可能是要和我商量面试时间，但接了后，却和其他公司不一样，面试官直接就问我，有时间吗？我们简单面试一下。我看了看体育老师，过去请了个假，就赶紧去一边面试了，不知">
+<meta name="twitter:title" content="MySQL数据库总结大全">
+<meta name="twitter:description" content="前言本篇博客给出关于数据库MySQL的总结，很不错。 链接1.1  InnoDB记录存储结构InnoDB记录存储结构 1.2  InnoDB数据页结构InnoDB数据页结构 1.3 MySQL 命令执行过程和存储引擎概述MySQL 命令执行过程和存储引擎概述 1.4  MySQL 索引(上)MySQL索引(基础原理)&amp;amp;version=12020810&amp;amp;nettype=WIFI&amp;am">
 
 
 
@@ -131,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="https://stormwangxhu.github.io/2018/04/10/记阿里巴巴-Java-实习第一面/"/>
+  <link rel="canonical" href="https://stormwangxhu.github.io/2018/09/26/MySQL数据库总结大全/"/>
 
 
 
 
 
-  <title>记阿里巴巴 Java 实习第一面 | StormWangxhu's blog</title>
+  <title>MySQL数据库总结大全 | StormWangxhu's blog</title>
   
 
 
@@ -319,7 +319,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://stormwangxhu.github.io/2018/04/10/记阿里巴巴-Java-实习第一面/">
+    <link itemprop="mainEntityOfPage" href="https://stormwangxhu.github.io/2018/09/26/MySQL数据库总结大全/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="StormWangxhu">
@@ -336,7 +336,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">记阿里巴巴 Java 实习第一面</h1>
+          <h1 class="post-title" itemprop="name headline">MySQL数据库总结大全</h1>
         
 
         <div class="post-meta">
@@ -348,8 +348,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-10T00:00:00+08:00">
-                2018-04-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-26T22:22:43+08:00">
+                2018-09-26
               </time>
             
 
@@ -431,33 +431,29 @@
       
 
       
-        <blockquote>
-<p>我看好自己的认真！</p>
-</blockquote>
-<hr>
-<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>炎热的下午，刚在体育课上测完了一千米，嗓子要着火了，跑完后感觉要膨胀了，又测了50、身高、肺活量、体前屈。测完后就在树荫下休息，离下课还有10分钟的时候，口袋里的手机突然想起，拿起一看，阿里巴巴集团，当时就意识到可能是要和我商量面试时间，但接了后，却和其他公司不一样，面试官直接就问我，有时间吗？我们简单面试一下。我看了看体育老师，过去请了个假，就赶紧去一边面试了，不知道为什么声音很小，我有点儿听不清，好几次就请求面试官：“不好意思呢，刚才没听清，嘻嘻~”挺尴尬的。面试了34分钟。我到现在有的问题都忘了，大体内容如下：</p>
-<h2 id="面试内容"><a href="#面试内容" class="headerlink" title="面试内容"></a>面试内容</h2><p>1、自我介绍：balabala</p>
-<p>2、现在都学习了些什么？balabala</p>
-<p>3、HashMap底层实现原理，是否读过HashMap源码？</p>
-<p>4、HashMap和ConcurrentHashMap在线程安全上有何区别？如何实现？</p>
-<p>5、项目：小程序。问到遇到什么问题吗？在这里问了好多，还有业务逻辑，感觉答得都不是太好。</p>
-<p>6、了解过哪些中间件？</p>
-<p>7、Java 的特性？</p>
-<p>8、Java 内存模型</p>
-<p>9、JVM 类加载机制</p>
-<p>10、双亲委派模型</p>
-<p>11、Object都有哪些方法？</p>
-<p>12、高并发、高并发、高并发！重要的说三遍。如何解决？答得不太好，一脸懵逼！</p>
-<p>13、锁优化CAS</p>
-<p>14、sychronized和volitile</p>
-<p>15、反射的使用场景？很重要，我没怎么说上来。下来后回想感觉应该和框架（Spring）还有关系,以后学习得注意点。</p>
-<p>16、还问了我的英语怎么样？考六级了吗</p>
-<p>17、在Github上关注了什么开源项目了没？</p>
-<p>18、看了我的博客（挺开心的，感觉博客搭建上还是挺好的），问我是自学吗？一般怎么学？</p>
-<p>19、了解Linux吗？确实没咋用，就说了知道几个命令。</p>
-<p>20、觉得自己是一个怎样的人？</p>
-<p>21、又想起来了，还问到了异常？并解释为什么？</p>
-<p>大概就这些吧，有些记不起来了，最后也没像头条面试官一样，问我有什么问题要问吗？就说那就今天先面试到这儿，我说了声谢谢。哦，对了，开头自我介绍前，还问我什么时候可以来实习，能实习多长时间？然后就没了，大厂面试就这样结束了。不知道结果会怎么样，以我现在的知识，估计也去不了，还得继续加油努力呢！路漫漫其修远兮，吾将上下而求索！</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本篇博客给出关于数据库MySQL的总结，很不错。</p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="1-1-InnoDB记录存储结构"><a href="#1-1-InnoDB记录存储结构" class="headerlink" title="1.1  InnoDB记录存储结构"></a>1.1  InnoDB记录存储结构</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483670&amp;idx=1&amp;sn=751d84d0ce50d64934d636014abe2023&amp;chksm=979688e4a0e101f2a51d1f06ec75e25c56f8936321ae43badc2fe9fc1257b4dc1c24223699de&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">InnoDB记录存储结构</a></p>
+<h3 id="1-2-InnoDB数据页结构"><a href="#1-2-InnoDB数据页结构" class="headerlink" title="1.2  InnoDB数据页结构"></a>1.2  InnoDB数据页结构</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483678&amp;idx=1&amp;sn=913780d42e7a81fd3f9b747da4fba8ec&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;abtest_cookie=BQABAAgACgALABIAEwAFAJ6GHgAklx4AWZkeAGGZHgBtmR4AAAA%3D&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">InnoDB数据页结构</a></p>
+<h3 id="1-3-MySQL-命令执行过程和存储引擎概述"><a href="#1-3-MySQL-命令执行过程和存储引擎概述" class="headerlink" title="1.3 MySQL 命令执行过程和存储引擎概述"></a>1.3 MySQL 命令执行过程和存储引擎概述</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483687&amp;idx=1&amp;sn=5959a1bc28acaf3e376b94b974f2faee&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;abtest_cookie=BQABAAgACgALABIAEwAFAJ6GHgAklx4AWZkeAGGZHgBtmR4AAAA%3D&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">MySQL 命令执行过程和存储引擎概述</a></p>
+<h3 id="1-4-MySQL-索引-上"><a href="#1-4-MySQL-索引-上" class="headerlink" title="1.4  MySQL 索引(上)"></a>1.4  MySQL 索引(上)</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483701&amp;idx=1&amp;sn=bd229dd584f51ef4fe545d44ad8cdbf9&amp;chksm=979688c7a0e101d1b5c752094013b78f5bd50ab905257ba82149d85d35ea07aba1a15b0e52b4&amp;mpshare=1&amp;scene=1&amp;srcid=0409Tn66UYWSWvqEVlOpwGtR&amp;key=6cd553e86912686a47d76f2d900b1b5b388c90b29708f016db3a6e1bcebe032220ba63626095c4298f32cda7d0d7bd11bded2365f05c32e522584dd149b98db0bb8549ef144cdca694665d31d35cfeef&amp;ascene=0&amp;uin=MzAzMjU4NDM3Nw%3D%3D&amp;devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.12.4+build(16E195" target="_blank" rel="noopener">MySQL索引(基础原理)</a>&amp;version=12020810&amp;nettype=WIFI&amp;lang=zh_CN&amp;fontScale=100&amp;pass_ticket=YHEmqDDX8hHkj5FiSVpQvjYqIMBDHHDS2po4mfJe%2BqIXlqwJI%2Bg7aJUZq0%2BDwGJ0)</p>
+<h3 id="1-5-MySQL-锁引-中"><a href="#1-5-MySQL-锁引-中" class="headerlink" title="1.5 MySQL 锁引(中)"></a>1.5 MySQL 锁引(中)</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483718&amp;idx=1&amp;sn=4681f6ef312774f4a0a5f6bfb06c862a&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;abtest_cookie=BQABAAgACgALABIAEwAFAJ6GHgAklx4AWZkeAGGZHgBtmR4AAAA%3D&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">MySQL 锁引(索引优化)</a></p>
+<h3 id="1-6-MySQL-的基本管理"><a href="#1-6-MySQL-的基本管理" class="headerlink" title="1.6 MySQL 的基本管理"></a>1.6 MySQL 的基本管理</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483707&amp;idx=1&amp;sn=21ceb451aaf6f68e5b8e2471d6d073a4&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;abtest_cookie=BQABAAgACgALABIAEwAFAJ6GHgAklx4AWZkeAGGZHgBtmR4AAAA%3D&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">MySQL 的基本管理</a></p>
+<h3 id="1-7-MySQL-数据目录"><a href="#1-7-MySQL-数据目录" class="headerlink" title="1.7 MySQL 数据目录"></a>1.7 MySQL 数据目录</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483738&amp;idx=1&amp;sn=b995af5bfc485c36079423fbe6f3bde8&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;abtest_cookie=BQABAAgACgALABIAEwAFAJ6GHgAklx4AWZkeAGGZHgBtmR4AAAA%3D&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">MySQL 数据目录</a></p>
+<h3 id="1-8-MySQL-概述"><a href="#1-8-MySQL-概述" class="headerlink" title="1.8 MySQL 概述"></a>1.8 MySQL 概述</h3><p><a href="https://mp.weixin.qq.com/sbiz=MzIxNTQ3NDMzMw==&amp;mid=2247483757&amp;idx=1&amp;sn=873db436666f63750d09bfed57d0dc88&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;abtest_cookie=BQABAAgACgALABIAEwAFAJ6GHgAklx4AWZkeAGGZHgBtmR4AAAA%3D&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">MySQL 概述</a></p>
+<h3 id="1-9-MySQL-数据类型"><a href="#1-9-MySQL-数据类型" class="headerlink" title="1.9 MySQL 数据类型"></a>1.9 MySQL 数据类型</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483773&amp;idx=1&amp;sn=7c473c02c1df8b852121f07112b20b48&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;abtest_cookie=BQABAAgACgALABIAEwAFAJ6GHgAklx4AWZkeAGGZHgBtmR4AAAA%3D&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">MySQL 数据类型</a></p>
+<h3 id="2-0-MySQL-表的基本操作-上"><a href="#2-0-MySQL-表的基本操作-上" class="headerlink" title="2.0 MySQL 表的基本操作(上)"></a>2.0 MySQL 表的基本操作(上)</h3><p><a href="https://mp.weixin.qq.com/sbiz=MzIxNTQ3NDMzMw==&amp;mid=2247483786&amp;idx=1&amp;sn=ef51d6d588535e986f479a2a2a23bb24&amp;chksm=97968878a0e1016e6471b62fe6295d3bfe4c96ba21057ce85cda2fe50d7afb1da5d1d6e1db2b&amp;scene=38&amp;ascene=0&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;abtest_cookie=BQABAAgACgALABIAEwAFAJ6GHgAklx4AWZkeAGGZHgBtmR4AAAA%3D&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">MySQL 表的基本操作(上)</a></p>
+<h3 id="2-1-数据库基本操作"><a href="#2-1-数据库基本操作" class="headerlink" title="2.1 数据库基本操作"></a>2.1 数据库基本操作</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483800&amp;idx=1&amp;sn=57bbb79663c745b51d3da0aaf3b71002&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">数据库基本操作(库的增删改查)</a></p>
+<h3 id="2-2-数据库表的基本操作-上"><a href="#2-2-数据库表的基本操作-上" class="headerlink" title="2.2 数据库表的基本操作(上)"></a>2.2 数据库表的基本操作(上)</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483777&amp;idx=1&amp;sn=356140ac4840d09cc776662530b007f4&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">数据库表的基本操作(上)</a></p>
+<h3 id="2-3-数据库表的基本操作-下"><a href="#2-3-数据库表的基本操作-下" class="headerlink" title="2.3 数据库表的基本操作(下)"></a>2.3 数据库表的基本操作(下)</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483800&amp;idx=1&amp;sn=57bbb79663c745b51d3da0aaf3b71002&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">数据库表的基本操作(下)</a></p>
+<h3 id="2-4-查询简介-一"><a href="#2-4-查询简介-一" class="headerlink" title="2.4 查询简介(一)"></a>2.4 查询简介(一)</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483832&amp;idx=1&amp;sn=4e6784718fe35dddfe22211ed186c56a&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">查询简介(一)</a></p>
+<h3 id="2-5-查询简介-二"><a href="#2-5-查询简介-二" class="headerlink" title="2.5 查询简介(二)"></a>2.5 查询简介(二)</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483835&amp;idx=1&amp;sn=d192920e61784ff8df9deff6adb5e539&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">查询简介(二)</a></p>
+<h3 id="2-6-查询简介-三）表达式和函数"><a href="#2-6-查询简介-三）表达式和函数" class="headerlink" title="2.6 查询简介(三）表达式和函数"></a>2.6 查询简介(三）表达式和函数</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483838&amp;idx=1&amp;sn=dc5a80b36f163f724ee264d4701d5606&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">查询简介(三）表达式和函数</a></p>
+<h3 id="2-7-查询简介-四-类型转换和分组"><a href="#2-7-查询简介-四-类型转换和分组" class="headerlink" title="2.7 查询简介(四) 类型转换和分组"></a>2.7 查询简介(四) 类型转换和分组</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483838&amp;idx=1&amp;sn=dc5a80b36f163f724ee264d4701d5606&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">查询简介(四) 类型转换和分组</a></p>
+<h3 id="2-8-查询简介-五-子查询"><a href="#2-8-查询简介-五-子查询" class="headerlink" title="2.8 查询简介(五) 子查询"></a>2.8 查询简介(五) 子查询</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483860&amp;idx=1&amp;sn=2d97cc4e530cd0947fd28f372c375831&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">查询简介(五) 子查询</a></p>
+<h3 id="2-9-查询简介-六-连接查询"><a href="#2-9-查询简介-六-连接查询" class="headerlink" title="2.9 查询简介(六) 连接查询"></a>2.9 查询简介(六) 连接查询</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483935&amp;idx=1&amp;sn=3701567aecf13fb478cf3e9e3b1c9da0&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">查询简介(六) 连接查询</a></p>
+<h3 id="3-0-查询简介-七-组合查询"><a href="#3-0-查询简介-七-组合查询" class="headerlink" title="3.0 查询简介(七) 组合查询"></a>3.0 查询简介(七) 组合查询</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483947&amp;idx=1&amp;sn=6e0686b47cae7f89e83de66e9db0a408&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">查询简介(七) 组合查询</a></p>
+<h3 id="数据的插入、删除、更新"><a href="#数据的插入、删除、更新" class="headerlink" title="数据的插入、删除、更新"></a>数据的插入、删除、更新</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483951&amp;idx=1&amp;sn=d612bf5569750549ae70105b02b3f6b4&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">数据的插入、删除、更新</a></p>
+<h2 id="索引和锁终结版"><a href="#索引和锁终结版" class="headerlink" title="索引和锁终结版"></a>索引和锁终结版</h2><p><a href="https://juejin.im/post/5b55b842f265da0f9e589e79" target="_blank" rel="noopener">数据库两大神器[锁，索引]</a></p>
 
       
     </div>
@@ -475,7 +471,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/实习/" rel="tag"><i class="fa fa-tag"></i> 实习</a>
+            <a href="/tags/MySQL总结/" rel="tag"><i class="fa fa-tag"></i> MySQL总结</a>
+          
+            <a href="/tags/B-树/" rel="tag"><i class="fa fa-tag"></i> B+树</a>
           
         </div>
       
@@ -502,6 +500,36 @@
 <div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script type="text/javascript" src="http://jslibs.wuxubj.cn/sweetalert_mini/jquery-1.7.1.min.js"></script>
+  <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
+  <p><span>本文标题:</span><a href="/2018/09/26/MySQL数据库总结大全/">MySQL数据库总结大全</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 StormWangxhu 的个人博客">StormWangxhu</a></p>
+  <p><span>发布时间:</span>2018年09月26日 - 22:09</p>
+  <p><span>最后更新:</span>2018年09月26日 - 22:09</p>
+  <p><span>原始链接:</span><a href="/2018/09/26/MySQL数据库总结大全/" title="MySQL数据库总结大全">https://stormwangxhu.github.io/2018/09/26/MySQL数据库总结大全/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://stormwangxhu.github.io/2018/09/26/MySQL数据库总结大全/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    clipboard.on('success', $(function(){
+      $(".fa-clipboard").click(function(){
+        swal({   
+          title: "",   
+          text: '复制成功',   
+          html: false,
+          timer: 500,   
+          showConfirmButton: false
+        });
+      });
+    }));  
+</script>
+
 
       
 </div>
@@ -509,8 +537,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/09/再看-JVM-的类加载机制/" rel="next" title="再看 JVM 的类加载机制">
-                <i class="fa fa-chevron-left"></i> 再看 JVM 的类加载机制
+              <a href="/2018/09/26/八大基础排序总结/" rel="next" title="八大基础排序总结">
+                <i class="fa fa-chevron-left"></i> 八大基础排序总结
               </a>
             
           </div>
@@ -518,10 +546,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/16/记百度-Java-实习第一面/" rel="prev" title="记百度 Java 实习第一面">
-                记百度 Java 实习第一面 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -669,7 +693,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面试内容"><span class="nav-number">2.</span> <span class="nav-text">面试内容</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#链接"><span class="nav-number">2.</span> <span class="nav-text">链接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-InnoDB记录存储结构"><span class="nav-number">2.1.</span> <span class="nav-text">1.1  InnoDB记录存储结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-InnoDB数据页结构"><span class="nav-number">2.2.</span> <span class="nav-text">1.2  InnoDB数据页结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-MySQL-命令执行过程和存储引擎概述"><span class="nav-number">2.3.</span> <span class="nav-text">1.3 MySQL 命令执行过程和存储引擎概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-MySQL-索引-上"><span class="nav-number">2.4.</span> <span class="nav-text">1.4  MySQL 索引(上)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-MySQL-锁引-中"><span class="nav-number">2.5.</span> <span class="nav-text">1.5 MySQL 锁引(中)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-MySQL-的基本管理"><span class="nav-number">2.6.</span> <span class="nav-text">1.6 MySQL 的基本管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-MySQL-数据目录"><span class="nav-number">2.7.</span> <span class="nav-text">1.7 MySQL 数据目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-8-MySQL-概述"><span class="nav-number">2.8.</span> <span class="nav-text">1.8 MySQL 概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-9-MySQL-数据类型"><span class="nav-number">2.9.</span> <span class="nav-text">1.9 MySQL 数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-0-MySQL-表的基本操作-上"><span class="nav-number">2.10.</span> <span class="nav-text">2.0 MySQL 表的基本操作(上)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-数据库基本操作"><span class="nav-number">2.11.</span> <span class="nav-text">2.1 数据库基本操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-数据库表的基本操作-上"><span class="nav-number">2.12.</span> <span class="nav-text">2.2 数据库表的基本操作(上)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-数据库表的基本操作-下"><span class="nav-number">2.13.</span> <span class="nav-text">2.3 数据库表的基本操作(下)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-查询简介-一"><span class="nav-number">2.14.</span> <span class="nav-text">2.4 查询简介(一)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-查询简介-二"><span class="nav-number">2.15.</span> <span class="nav-text">2.5 查询简介(二)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-查询简介-三）表达式和函数"><span class="nav-number">2.16.</span> <span class="nav-text">2.6 查询简介(三）表达式和函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-查询简介-四-类型转换和分组"><span class="nav-number">2.17.</span> <span class="nav-text">2.7 查询简介(四) 类型转换和分组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-8-查询简介-五-子查询"><span class="nav-number">2.18.</span> <span class="nav-text">2.8 查询简介(五) 子查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-9-查询简介-六-连接查询"><span class="nav-number">2.19.</span> <span class="nav-text">2.9 查询简介(六) 连接查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-0-查询简介-七-组合查询"><span class="nav-number">2.20.</span> <span class="nav-text">3.0 查询简介(七) 组合查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据的插入、删除、更新"><span class="nav-number">2.21.</span> <span class="nav-text">数据的插入、删除、更新</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引和锁终结版"><span class="nav-number">3.</span> <span class="nav-text">索引和锁终结版</span></a></li></ol></div>
             
 
           </div>
