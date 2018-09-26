@@ -90,18 +90,18 @@
 
 
 
-<meta name="description" content="前言本篇博客给出关于数据库MySQL的总结，很不错。 链接1.1  InnoDB记录存储结构InnoDB记录存储结构 1.2  InnoDB数据页结构InnoDB数据页结构 1.3 MySQL 命令执行过程和存储引擎概述MySQL 命令执行过程和存储引擎概述 1.4  MySQL 索引(上)MySQL索引(基础原理)&amp;amp;version=12020810&amp;amp;nettype=WIFI&amp;am">
+<meta name="description" content="前言本篇博客给出关于数据库MySQL的总结，很不错。 链接1.1  InnoDB记录存储结构InnoDB记录存储结构 1.2  InnoDB数据页结构InnoDB数据页结构 1.3 MySQL 命令执行过程和存储引擎概述MySQL 命令执行过程和存储引擎概述 1.4  MySQL 索引(上)MySQL索引(基础原理) 1.5 MySQL 锁引(中)MySQL 锁引(索引优化) 1.6 MySQL">
 <meta name="keywords" content="MySQL总结,B+树">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL数据库总结大全">
 <meta property="og:url" content="https://stormwangxhu.github.io/2018/09/26/MySQL数据库总结大全/index.html">
 <meta property="og:site_name" content="StormWangxhu&#39;s blog">
-<meta property="og:description" content="前言本篇博客给出关于数据库MySQL的总结，很不错。 链接1.1  InnoDB记录存储结构InnoDB记录存储结构 1.2  InnoDB数据页结构InnoDB数据页结构 1.3 MySQL 命令执行过程和存储引擎概述MySQL 命令执行过程和存储引擎概述 1.4  MySQL 索引(上)MySQL索引(基础原理)&amp;amp;version=12020810&amp;amp;nettype=WIFI&amp;am">
+<meta property="og:description" content="前言本篇博客给出关于数据库MySQL的总结，很不错。 链接1.1  InnoDB记录存储结构InnoDB记录存储结构 1.2  InnoDB数据页结构InnoDB数据页结构 1.3 MySQL 命令执行过程和存储引擎概述MySQL 命令执行过程和存储引擎概述 1.4  MySQL 索引(上)MySQL索引(基础原理) 1.5 MySQL 锁引(中)MySQL 锁引(索引优化) 1.6 MySQL">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-26T14:31:25.745Z">
+<meta property="og:updated_time" content="2018-09-26T14:38:25.852Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL数据库总结大全">
-<meta name="twitter:description" content="前言本篇博客给出关于数据库MySQL的总结，很不错。 链接1.1  InnoDB记录存储结构InnoDB记录存储结构 1.2  InnoDB数据页结构InnoDB数据页结构 1.3 MySQL 命令执行过程和存储引擎概述MySQL 命令执行过程和存储引擎概述 1.4  MySQL 索引(上)MySQL索引(基础原理)&amp;amp;version=12020810&amp;amp;nettype=WIFI&amp;am">
+<meta name="twitter:description" content="前言本篇博客给出关于数据库MySQL的总结，很不错。 链接1.1  InnoDB记录存储结构InnoDB记录存储结构 1.2  InnoDB数据页结构InnoDB数据页结构 1.3 MySQL 命令执行过程和存储引擎概述MySQL 命令执行过程和存储引擎概述 1.4  MySQL 索引(上)MySQL索引(基础原理) 1.5 MySQL 锁引(中)MySQL 锁引(索引优化) 1.6 MySQL">
 
 
 
@@ -348,7 +348,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-26T22:31:25+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-26T22:38:25+08:00">
                 2018-09-26
               </time>
             
@@ -435,7 +435,7 @@
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="1-1-InnoDB记录存储结构"><a href="#1-1-InnoDB记录存储结构" class="headerlink" title="1.1  InnoDB记录存储结构"></a>1.1  InnoDB记录存储结构</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483670&amp;idx=1&amp;sn=751d84d0ce50d64934d636014abe2023&amp;chksm=979688e4a0e101f2a51d1f06ec75e25c56f8936321ae43badc2fe9fc1257b4dc1c24223699de&amp;scene=21#wechat_redirect" target="_blank" rel="noopener">InnoDB记录存储结构</a></p>
 <h3 id="1-2-InnoDB数据页结构"><a href="#1-2-InnoDB数据页结构" class="headerlink" title="1.2  InnoDB数据页结构"></a>1.2  InnoDB数据页结构</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483678&amp;idx=1&amp;sn=913780d42e7a81fd3f9b747da4fba8ec&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;abtest_cookie=BQABAAgACgALABIAEwAFAJ6GHgAklx4AWZkeAGGZHgBtmR4AAAA%3D&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">InnoDB数据页结构</a></p>
 <h3 id="1-3-MySQL-命令执行过程和存储引擎概述"><a href="#1-3-MySQL-命令执行过程和存储引擎概述" class="headerlink" title="1.3 MySQL 命令执行过程和存储引擎概述"></a>1.3 MySQL 命令执行过程和存储引擎概述</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483687&amp;idx=1&amp;sn=5959a1bc28acaf3e376b94b974f2faee&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;abtest_cookie=BQABAAgACgALABIAEwAFAJ6GHgAklx4AWZkeAGGZHgBtmR4AAAA%3D&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">MySQL 命令执行过程和存储引擎概述</a></p>
-<h3 id="1-4-MySQL-索引-上"><a href="#1-4-MySQL-索引-上" class="headerlink" title="1.4  MySQL 索引(上)"></a>1.4  MySQL 索引(上)</h3><p><a href="https://mp.weixin.qq.com/sbiz=MzIxNTQ3NDMzMw==&amp;mid=2247483701&amp;idx=1&amp;sn=bd229dd584f51ef4fe545d44ad8cdbf9&amp;chksm=979688c7a0e101d1b5c752094013b78f5bd50ab905257ba82149d85d35ea07aba1a15b0e52b4&amp;mpshare=1&amp;scene=1&amp;srcid=0409Tn66UYWSWvqEVlOpwGtR&amp;key=6cd553e86912686a47d76f2d900b1b5b388c90b29708f016db3a6e1bcebe032220ba63626095c4298f32cda7d0d7bd11bded2365f05c32e522584dd149b98db0bb8549ef144cdca694665d31d35cfeef&amp;ascene=0&amp;uin=MzAzMjU4NDM3Nw%3D%3D&amp;devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.12.4+build(16E195" target="_blank" rel="noopener">MySQL索引(基础原理)</a>&amp;version=12020810&amp;nettype=WIFI&amp;lang=zh_CN&amp;fontScale=100&amp;pass_ticket=YHEmqDDX8hHkj5FiSVpQvjYqIMBDHHDS2po4mfJe%2BqIXlqwJI%2Bg7aJUZq0%2BDwGJ0)</p>
+<h3 id="1-4-MySQL-索引-上"><a href="#1-4-MySQL-索引-上" class="headerlink" title="1.4  MySQL 索引(上)"></a>1.4  MySQL 索引(上)</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483701&amp;idx=1&amp;sn=bd229dd584f51ef4fe545d44ad8cdbf9&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;abtest_cookie=BQABAAgACgALABIAEwAFAJ6GHgAklx4AWZkeAGGZHgBtmR4AAAA%3D&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">MySQL索引(基础原理)</a></p>
 <h3 id="1-5-MySQL-锁引-中"><a href="#1-5-MySQL-锁引-中" class="headerlink" title="1.5 MySQL 锁引(中)"></a>1.5 MySQL 锁引(中)</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483718&amp;idx=1&amp;sn=4681f6ef312774f4a0a5f6bfb06c862a&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;abtest_cookie=BQABAAgACgALABIAEwAFAJ6GHgAklx4AWZkeAGGZHgBtmR4AAAA%3D&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">MySQL 锁引(索引优化)</a></p>
 <h3 id="1-6-MySQL-的基本管理"><a href="#1-6-MySQL-的基本管理" class="headerlink" title="1.6 MySQL 的基本管理"></a>1.6 MySQL 的基本管理</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483707&amp;idx=1&amp;sn=21ceb451aaf6f68e5b8e2471d6d073a4&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;abtest_cookie=BQABAAgACgALABIAEwAFAJ6GHgAklx4AWZkeAGGZHgBtmR4AAAA%3D&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">MySQL 的基本管理</a></p>
 <h3 id="1-7-MySQL-数据目录"><a href="#1-7-MySQL-数据目录" class="headerlink" title="1.7 MySQL 数据目录"></a>1.7 MySQL 数据目录</h3><p><a href="https://mp.weixin.qq.com/s?__biz=MzIxNTQ3NDMzMw==&amp;mid=2247483738&amp;idx=1&amp;sn=b995af5bfc485c36079423fbe6f3bde8&amp;scene=19&amp;ascene=7&amp;devicetype=android-22&amp;version=26060739&amp;nettype=cmnet&amp;abtest_cookie=BQABAAgACgALABIAEwAFAJ6GHgAklx4AWZkeAGGZHgBtmR4AAAA%3D&amp;lang=zh_CN&amp;pass_ticket=GlIsOPOuYat%2FzERW4Aormr743Npz5aZ3uHLvQ2x%2Fz3XZirUAC3vQlHWQhN67Xh9Y&amp;wx_header=1" target="_blank" rel="noopener">MySQL 数据目录</a></p>
