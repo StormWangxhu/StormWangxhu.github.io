@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[面试前需要了解的东西]]></title>
+    <url>%2F2018%2F09%2F27%2F%E9%9D%A2%E8%AF%95%E5%89%8D%E9%9C%80%E8%A6%81%E4%BA%86%E8%A7%A3%E7%9A%84%E4%B8%9C%E8%A5%BF%2F</url>
+    <content type="text"><![CDATA[前言本篇博客给出别人整理出的一些面试常见题目，在大二下面试的过程中经常问到的一些，这篇博文总结的也非常棒，里面也有博主自己整理的好的资源的链接。 仰望星空，脚踏实地！ 链接1.0 面试前需要了解的东西 2.0 几道让你拿offer的面试题 3.0 基础面试题 上面三个链接都包含的信息量比较大，需要耐心读完，理解！]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>集合题总结</tag>
+        <tag>Servlet+Tomcat题总结</tag>
+        <tag>JSP题总结</tag>
+        <tag>JDBC题总结</tag>
+        <tag>数据库题总结</tag>
+        <tag>HTTP题总结</tag>
+        <tag>XML+JSON题总结</tag>
+        <tag>过滤器监听器</tag>
+        <tag>AJAX题总结</tag>
+        <tag>MyBatis题总结</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MySQL数据库总结大全]]></title>
     <url>%2F2018%2F09%2F26%2FMySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E6%80%BB%E7%BB%93%E5%A4%A7%E5%85%A8%2F</url>
     <content type="text"><![CDATA[前言本篇博客给出关于数据库MySQL的总结，很不错。 链接InnoDB记录存储结构InnoDB记录存储结构 InnoDB数据页结构InnoDB数据页结构 MySQL 命令执行过程和存储引擎概述MySQL 命令执行过程和存储引擎概述 MySQL 索引(上)MySQL索引(基础原理) MySQL 锁引(中)MySQL 锁引(索引优化) MySQL 的基本管理MySQL 的基本管理 MySQL 数据目录MySQL 数据目录 MySQL 概述MySQL 概述 MySQL 数据类型MySQL 数据类型 MySQL 表的基本操作(上)MySQL 表的基本操作(上) 数据库基本操作数据库基本操作(库的增删改查) 数据库表的基本操作(上)数据库表的基本操作(上) 数据库表的基本操作(下)数据库表的基本操作(下) 查询简介(一)查询简介(一) 查询简介(二)查询简介(二) 查询简介(三）表达式和函数查询简介(三）表达式和函数 查询简介(四) 类型转换和分组查询简介(四) 类型转换和分组 查询简介(五) 子查询查询简介(五) 子查询 查询简介(六) 连接查询查询简介(六) 连接查询 查询简介(七) 组合查询查询简介(七) 组合查询 数据的插入、删除、更新数据的插入、删除、更新 索引和锁终结版数据库两大神器[锁，索引]]]></content>
