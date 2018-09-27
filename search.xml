@@ -57,7 +57,7 @@
   <entry>
     <title><![CDATA[Spring 总结]]></title>
     <url>%2F2018%2F09%2F27%2FSpring-%E6%80%BB%E7%BB%93%2F</url>
-    <content type="text"><![CDATA[前言本篇博客是关于框架Spring 的一些好的总结，给出链接以更好的学习。 链接Spring 入门第一篇 Spring [依赖注入] Spring [AOP模块] Spring [DAO模块] SpringMVC [开发Controller] SpringMVC [参数绑定、数据回显、文件上传] SpringMVC [校验器、统一处理异常。RESTful、拦截器] SpringBoot 入门 SpringData JPA 入门 Spring IOC 总结 Spring AOP总结 上面是关于Spring 的一些总结，非常棒。 脚踏实地，仰望星空！]]></content>
+    <content type="text"><![CDATA[前言本篇博客是关于框架Spring 的一些好的总结，给出链接以更好的学习。 链接Spring 入门第一篇 Spring [依赖注入] Spring [AOP模块] Spring [DAO模块] SpringMVC [开发Controller] SpringMVC [参数绑定、数据回显、文件上传] SpringMVC [校验器、统一处理异常、RESTful、拦截器] SpringBoot 入门 SpringData JPA 入门 Spring IOC 总结 Spring AOP总结 上面是关于Spring 的一些总结，非常棒。 脚踏实地，仰望星空！]]></content>
       <categories>
         <category>Spring</category>
       </categories>
