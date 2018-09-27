@@ -24,6 +24,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[说几道简单算法题]]></title>
+    <url>%2F2018%2F09%2F27%2F%E8%AF%B4%E5%87%A0%E9%81%93%E7%AE%80%E5%8D%95%E7%AE%97%E6%B3%95%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[简答算法总结先给出八大排序的链接： 八大基础排序总结 链接 上面的理解后，下面给出常见简单算法题： 十道简单算法题(一) 十道简单算法题(二)]]></content>
+      <categories>
+        <category>算法数据结构</category>
+      </categories>
+      <tags>
+        <tag>简单算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[面试前需要了解的东西]]></title>
     <url>%2F2018%2F09%2F27%2F%E9%9D%A2%E8%AF%95%E5%89%8D%E9%9C%80%E8%A6%81%E4%BA%86%E8%A7%A3%E7%9A%84%E4%B8%9C%E8%A5%BF%2F</url>
     <content type="text"><![CDATA[前言本篇博客给出别人整理出的一些面试常见题目，在大二下面试的过程中经常问到的一些，这篇博文总结的也非常棒，里面也有博主自己整理的好的资源的链接。 仰望星空，脚踏实地！ 链接1.0 面试前需要了解的东西 2.0 几道让你拿offer的面试题 3.0 基础面试题 上面三个链接都包含的信息量比较大，需要耐心读完，理解！]]></content>
@@ -44,6 +55,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Spring 总结]]></title>
+    <url>%2F2018%2F09%2F27%2FSpring-%E6%80%BB%E7%BB%93%2F</url>
+    <content type="text"><![CDATA[前言本篇博客是关于框架Spring 的一些好的总结，给出链接以更好的学习。 链接Spring 入门第一篇 Spring [依赖注入] Spring [AOP模块] Spring [DAO模块] SpringMVC [开发Controller] SpringMVC [参数绑定、数据回显、文件上传] SpringMVC [校验器、统一处理异常。RESTful、拦截器] SpringBoot 入门 SpringData JPA 入门 Spring IOC 总结 Spring AOP总结 上面是关于Spring 的一些总结，非常棒。 脚踏实地，仰望星空！]]></content>
+      <categories>
+        <category>Spring</category>
+      </categories>
+      <tags>
+        <tag>spring</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[操作系统总结]]></title>
     <url>%2F2018%2F09%2F27%2F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BB%93%2F</url>
     <content type="text"><![CDATA[前言下面给出操作系统相关的总结 操作系统第一篇 [引论] 操作系统第二篇 [进程管理] 操作系统第三篇 [线程] 操作系统第四篇 [处理机调度] 操作系统第五篇 [死锁] 操作系统第六篇 [存储器管理] 操作系统第七篇 [设备管理] 以上便是关于操作系统的一些总结好的文章。我会在后面的学习中，自己再学习，之后再进行补充，形成自己的理解。 脚踏实地，仰望星空！]]></content>
@@ -55,25 +77,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[说几道简单算法题]]></title>
-    <url>%2F2018%2F09%2F27%2F%E8%AF%B4%E5%87%A0%E9%81%93%E7%AE%80%E5%8D%95%E7%AE%97%E6%B3%95%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[简答算法总结先给出八大排序的链接： 八大基础排序总结 链接 上面的理解后，下面给出常见简单算法题： 十道简单算法题(一) 十道简单算法题(二)]]></content>
+    <title><![CDATA[MyBatis 总结]]></title>
+    <url>%2F2018%2F09%2F27%2FMyBatis-%E6%80%BB%E7%BB%93%2F</url>
+    <content type="text"><![CDATA[前言下面给出关于MyBatis 的总结。 链接MyBatis 入门 MyBatis [配置文件] MyBatis [关联映射] MyBatis [缓存、代理、逆向工程] MyBatis [与Spring 整合] MyBatis [面试题] 上面是关于MyBatis 的一些总结！ 仰望星空，脚踏实地！]]></content>
       <categories>
-        <category>算法数据结构</category>
+        <category>MyBatis总结</category>
       </categories>
       <tags>
-        <tag>简单算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Spring 总结]]></title>
-    <url>%2F2018%2F09%2F27%2FSpring-%E6%80%BB%E7%BB%93%2F</url>
-    <content type="text"><![CDATA[前言本篇博客是关于框架Spring 的一些好的总结，给出链接以更好的学习。 链接Spring 入门第一篇 Spring [依赖注入] Spring [AOP模块] Spring [DAO模块] SpringMVC [开发Controller] SpringMVC [参数绑定、数据回显、文件上传] SpringMVC [校验器、统一处理异常。RESTful、拦截器] SpringBoot 入门 SpringData JPA 入门 Spring IOC 总结 Spring AOP总结 上面是关于Spring 的一些总结，非常棒。 脚踏实地，仰望星空！]]></content>
-      <categories>
-        <category>Spring</category>
-      </categories>
-      <tags>
-        <tag>spring</tag>
+        <tag>MyBatis</tag>
       </tags>
   </entry>
   <entry>
@@ -95,6 +106,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[Linux 命令]]></title>
+    <url>%2F2018%2F09%2F25%2F%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81-Linux-%E5%91%BD%E4%BB%A4%2F</url>
+    <content type="text"><![CDATA[常见Linux命令目录切换命令 cd usr ：切换到usr目录下 cd..或者cd../：回退到上一级目录 cd /：切换到系统根目录下 cd ~：切换到用户主目录 cd -：切换到上一个所在目录 目录的操作命令（增删改查） mkdir 目录名称：增加目录 ls或者ll（ll是ls -l的缩写，ll命令以看到该目录下的所有目录和文件的详细信息）：查看目录信息 find 目录 参数： 寻找目录（查） mv 目录名称 目录的新位置： 移动目录的位置—剪切（改） cp -r 目录名称 目录拷贝的目标位置： 拷贝目录（改），-r代表递归拷贝 rm [-rf] 目录: 删除目录（删） 文件的操作命令（增删改查） touch 文件名称: 文件的创建（增） cat/more/less/tail 文件名称 :文件的查看（查） 123456789- cat：只能显示最后一屏内容- more：可以显示百分比，回车可以向下一行， 空格可以向下一页，q可以退出查看- less:可以使用键盘上的PgUp和PgDn向上 和向下翻页，q结束查看- tail-10 ：查看文件的后10行，Ctrl+C结束注意：命令 tail -f 文件 可以对某个文件进行动态监控，例如tomcat的日志文件， 会随着程序的运行，日志会变化，可以使用tail -f catalina-2016-11-11.log 监控 文 件的变化 vim 文件： 修改文件的内容（改） vim编辑器是Linux中的强大组件，是vi编辑器的加强版，vim编辑器的命令和快捷方式有很多，但此处不一一阐述，大家也无需研究的很透彻，使用vim编辑修改文件的方式基本会使用就可以了。 在实际开发中，使用vim编辑器主要作用就是修改配置文件，下面是一般步骤： 1vim 文件------&gt;进入文件-----&gt;命令模式------&gt;按i进入编辑模式-----&gt;编辑文件 -------&gt;按Esc进入底行模式-----&gt;输入:wq/q! （输入wq代表写入内容并退出，即保存；输入q!代表强制退出不保存。） rm -rf 文件： 删除文件（删） 同目录删除：熟记 rm -rf 文件 即可 压缩文件的操作命令（１）、Linux中的打包文件一般是以.tar结尾的，压缩的命令一般是以.gz结尾的。 而一般情况下打包和压缩是一起进行的，打包并压缩后的文件的后缀名一般.tar.gz 命令：tar -zcvf 打包压缩后的文件名 要打包压缩的文件 其中： z：调用gzip压缩命令进行压缩 c：打包文件 v：显示运行过程 f：指定文件名 比如：加入test目录下有三个文件分别是 :aaa.txt bbb.txt ccc.txt,如果我们要打包test目录并指定压缩后的压缩包名称为test.tar.gz可以使用命令： 1tar -zcvf test.tar.gz aaa.txt bbb.txt ccc.txt或：tar -zcvf test.tar.gz /test/ （２）、解压压缩包： 命令：tar [-xvf] 压缩文件 其中：x：代表解压 示例： 1231 将/test下的test.tar.gz解压到当前目录下可以使用命令：tar -xvf test.tar.gz2 将/test下的test.tar.gz解压到根目录/usr下: tar -xvf xxx.tar.gz -C /usr（- C代表指定解压的位置） 其他常用命令 pwd： 显示当前所在位置 grep 要搜索的字符串 要搜索的文件 –color： 搜索命令，–color代表高亮显示 ps -ef/ps aux： 这两个命令都是查看当前系统正在运行进程，两者的区别是展示格式不同。如果想要查看特定的进程可以使用这样的格式：ps aux|grep redis （查看包括redis字符串的进程） 注意：如果直接用ps（（Process Status））命令，会显示所有进程的状态，通常结合grep命令查看某进程的状态。 kill -9 进程的pid： 杀死进程（-9 表示强制终止。） 先用ps查找进程，然后用kill杀掉 网络通信命令 查看当前系统的网卡信息：ifconfig 查看与某台机器的连接情况：ping 查看当前系统的端口使用：netstat -an shutdown： shutdown -h now： 指定现在立即关机；shutdown +5 &quot;System will shutdown after 5 minutes&quot;:指定5分钟后关机，同时送出警告信息给登入 reboot： reboot： 重开机。reboot -w： 做个重开机的模拟（只有纪录并不会真的重开机）。 Linux命令链接下面给出常见Linux 命令网址大全 Linux命令大全]]></content>
+      <categories>
+        <category>总结</category>
+      </categories>
+      <tags>
+        <tag>Linux命令</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[从输入 URL 到页面加载发生了什么]]></title>
     <url>%2F2018%2F09%2F25%2F%E4%BB%8E%E8%BE%93%E5%85%A5-URL-%E5%88%B0%E9%A1%B5%E9%9D%A2%E5%8A%A0%E8%BD%BD%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88%2F</url>
     <content type="text"><![CDATA[前言从输入 URL 到页面加载发生了什么？面试过程中也问过，下面一篇是很不错的文章。 大致总结： DNS 解析 TCP三次握手建立连接 发送HTTP请求 服务器处理请求并返回响应报文 浏览器进行解析渲染 TCP四次挥手连接结束 链接从输入 URL 到页面加载发生了什么]]></content>
@@ -106,17 +128,6 @@
         <tag>HTTP</tag>
         <tag>TCP/UDP</tag>
         <tag>三次握手/四次挥手</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Linux 命令]]></title>
-    <url>%2F2018%2F09%2F25%2F%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81-Linux-%E5%91%BD%E4%BB%A4%2F</url>
-    <content type="text"><![CDATA[常见Linux命令目录切换命令 cd usr ：切换到usr目录下 cd..或者cd../：回退到上一级目录 cd /：切换到系统根目录下 cd ~：切换到用户主目录 cd -：切换到上一个所在目录 目录的操作命令（增删改查） mkdir 目录名称：增加目录 ls或者ll（ll是ls -l的缩写，ll命令以看到该目录下的所有目录和文件的详细信息）：查看目录信息 find 目录 参数： 寻找目录（查） mv 目录名称 目录的新位置： 移动目录的位置—剪切（改） cp -r 目录名称 目录拷贝的目标位置： 拷贝目录（改），-r代表递归拷贝 rm [-rf] 目录: 删除目录（删） 文件的操作命令（增删改查） touch 文件名称: 文件的创建（增） cat/more/less/tail 文件名称 :文件的查看（查） 123456789- cat：只能显示最后一屏内容- more：可以显示百分比，回车可以向下一行， 空格可以向下一页，q可以退出查看- less:可以使用键盘上的PgUp和PgDn向上 和向下翻页，q结束查看- tail-10 ：查看文件的后10行，Ctrl+C结束注意：命令 tail -f 文件 可以对某个文件进行动态监控，例如tomcat的日志文件， 会随着程序的运行，日志会变化，可以使用tail -f catalina-2016-11-11.log 监控 文 件的变化 vim 文件： 修改文件的内容（改） vim编辑器是Linux中的强大组件，是vi编辑器的加强版，vim编辑器的命令和快捷方式有很多，但此处不一一阐述，大家也无需研究的很透彻，使用vim编辑修改文件的方式基本会使用就可以了。 在实际开发中，使用vim编辑器主要作用就是修改配置文件，下面是一般步骤： 1vim 文件------&gt;进入文件-----&gt;命令模式------&gt;按i进入编辑模式-----&gt;编辑文件 -------&gt;按Esc进入底行模式-----&gt;输入:wq/q! （输入wq代表写入内容并退出，即保存；输入q!代表强制退出不保存。） rm -rf 文件： 删除文件（删） 同目录删除：熟记 rm -rf 文件 即可 压缩文件的操作命令（１）、Linux中的打包文件一般是以.tar结尾的，压缩的命令一般是以.gz结尾的。 而一般情况下打包和压缩是一起进行的，打包并压缩后的文件的后缀名一般.tar.gz 命令：tar -zcvf 打包压缩后的文件名 要打包压缩的文件 其中： z：调用gzip压缩命令进行压缩 c：打包文件 v：显示运行过程 f：指定文件名 比如：加入test目录下有三个文件分别是 :aaa.txt bbb.txt ccc.txt,如果我们要打包test目录并指定压缩后的压缩包名称为test.tar.gz可以使用命令： 1tar -zcvf test.tar.gz aaa.txt bbb.txt ccc.txt或：tar -zcvf test.tar.gz /test/ （２）、解压压缩包： 命令：tar [-xvf] 压缩文件 其中：x：代表解压 示例： 1231 将/test下的test.tar.gz解压到当前目录下可以使用命令：tar -xvf test.tar.gz2 将/test下的test.tar.gz解压到根目录/usr下: tar -xvf xxx.tar.gz -C /usr（- C代表指定解压的位置） 其他常用命令 pwd： 显示当前所在位置 grep 要搜索的字符串 要搜索的文件 –color： 搜索命令，–color代表高亮显示 ps -ef/ps aux： 这两个命令都是查看当前系统正在运行进程，两者的区别是展示格式不同。如果想要查看特定的进程可以使用这样的格式：ps aux|grep redis （查看包括redis字符串的进程） 注意：如果直接用ps（（Process Status））命令，会显示所有进程的状态，通常结合grep命令查看某进程的状态。 kill -9 进程的pid： 杀死进程（-9 表示强制终止。） 先用ps查找进程，然后用kill杀掉 网络通信命令 查看当前系统的网卡信息：ifconfig 查看与某台机器的连接情况：ping 查看当前系统的端口使用：netstat -an shutdown： shutdown -h now： 指定现在立即关机；shutdown +5 &quot;System will shutdown after 5 minutes&quot;:指定5分钟后关机，同时送出警告信息给登入 reboot： reboot： 重开机。reboot -w： 做个重开机的模拟（只有纪录并不会真的重开机）。 Linux命令链接下面给出常见Linux 命令网址大全 Linux命令大全]]></content>
-      <categories>
-        <category>总结</category>
-      </categories>
-      <tags>
-        <tag>Linux命令</tag>
       </tags>
   </entry>
   <entry>
