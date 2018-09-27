@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[说几道简单算法题]]></title>
-    <url>%2F2018%2F09%2F27%2F%E8%AF%B4%E5%87%A0%E9%81%93%E7%AE%80%E5%8D%95%E7%AE%97%E6%B3%95%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[简答算法总结先给出八大排序的链接： 八大基础排序总结 链接 上面的理解后，下面给出常见简单算法题： 十道简单算法题(一) 十道简单算法题(二)]]></content>
+    <title><![CDATA[MySQL数据库总结大全]]></title>
+    <url>%2F2018%2F09%2F27%2FMySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E6%80%BB%E7%BB%93%E5%A4%A7%E5%85%A8%2F</url>
+    <content type="text"><![CDATA[前言本篇博客给出关于数据库MySQL的总结，很不错。 链接InnoDB记录存储结构InnoDB记录存储结构 InnoDB数据页结构InnoDB数据页结构 MySQL 命令执行过程和存储引擎概述MySQL 命令执行过程和存储引擎概述 MySQL 索引(上)MySQL索引(基础原理) MySQL 锁引(中)MySQL 锁引(索引优化) MySQL 的基本管理MySQL 的基本管理 MySQL 数据目录MySQL 数据目录 MySQL 概述MySQL 概述 MySQL 数据类型MySQL 数据类型 MySQL 表的基本操作(上)MySQL 表的基本操作(上) 数据库基本操作数据库基本操作(库的增删改查) 数据库表的基本操作(上)数据库表的基本操作(上) 数据库表的基本操作(下)数据库表的基本操作(下) 查询简介(一)查询简介(一) 查询简介(二)查询简介(二) 查询简介(三）表达式和函数查询简介(三）表达式和函数 查询简介(四) 类型转换和分组查询简介(四) 类型转换和分组 查询简介(五) 子查询查询简介(五) 子查询 查询简介(六) 连接查询查询简介(六) 连接查询 查询简介(七) 组合查询查询简介(七) 组合查询 数据的插入、删除、更新数据的插入、删除、更新 索引和锁终结版数据库两大神器[锁，索引]]]></content>
       <categories>
-        <category>总结</category>
+        <category>数据库</category>
       </categories>
       <tags>
-        <tag>简单算法</tag>
+        <tag>MySQL总结</tag>
+        <tag>B+树</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[八大基础排序总结]]></title>
+    <url>%2F2018%2F09%2F27%2F%E5%85%AB%E5%A4%A7%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E6%80%BB%E7%BB%93%2F</url>
+    <content type="text"><![CDATA[前言本篇博客给出八大基础排序的总结以及Java 实现。 链接八大基础排序总结]]></content>
+      <categories>
+        <category>算法数据结构</category>
+      </categories>
+      <tags>
+        <tag>基础排序</tag>
       </tags>
   </entry>
   <entry>
@@ -32,26 +44,14 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[MySQL数据库总结大全]]></title>
-    <url>%2F2018%2F09%2F26%2FMySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E6%80%BB%E7%BB%93%E5%A4%A7%E5%85%A8%2F</url>
-    <content type="text"><![CDATA[前言本篇博客给出关于数据库MySQL的总结，很不错。 链接InnoDB记录存储结构InnoDB记录存储结构 InnoDB数据页结构InnoDB数据页结构 MySQL 命令执行过程和存储引擎概述MySQL 命令执行过程和存储引擎概述 MySQL 索引(上)MySQL索引(基础原理) MySQL 锁引(中)MySQL 锁引(索引优化) MySQL 的基本管理MySQL 的基本管理 MySQL 数据目录MySQL 数据目录 MySQL 概述MySQL 概述 MySQL 数据类型MySQL 数据类型 MySQL 表的基本操作(上)MySQL 表的基本操作(上) 数据库基本操作数据库基本操作(库的增删改查) 数据库表的基本操作(上)数据库表的基本操作(上) 数据库表的基本操作(下)数据库表的基本操作(下) 查询简介(一)查询简介(一) 查询简介(二)查询简介(二) 查询简介(三）表达式和函数查询简介(三）表达式和函数 查询简介(四) 类型转换和分组查询简介(四) 类型转换和分组 查询简介(五) 子查询查询简介(五) 子查询 查询简介(六) 连接查询查询简介(六) 连接查询 查询简介(七) 组合查询查询简介(七) 组合查询 数据的插入、删除、更新数据的插入、删除、更新 索引和锁终结版数据库两大神器[锁，索引]]]></content>
+    <title><![CDATA[说几道简单算法题]]></title>
+    <url>%2F2018%2F09%2F27%2F%E8%AF%B4%E5%87%A0%E9%81%93%E7%AE%80%E5%8D%95%E7%AE%97%E6%B3%95%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[简答算法总结先给出八大排序的链接： 八大基础排序总结 链接 上面的理解后，下面给出常见简单算法题： 十道简单算法题(一) 十道简单算法题(二)]]></content>
       <categories>
-        <category>总结</category>
+        <category>算法数据结构</category>
       </categories>
       <tags>
-        <tag>MySQL总结</tag>
-        <tag>B+树</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[八大基础排序总结]]></title>
-    <url>%2F2018%2F09%2F26%2F%E5%85%AB%E5%A4%A7%E5%9F%BA%E7%A1%80%E6%8E%92%E5%BA%8F%E6%80%BB%E7%BB%93%2F</url>
-    <content type="text"><![CDATA[前言本篇博客给出八大基础排序的总结以及Java 实现。 链接八大基础排序总结]]></content>
-      <categories>
-        <category>总结</category>
-      </categories>
-      <tags>
-        <tag>基础排序</tag>
+        <tag>简单算法</tag>
       </tags>
   </entry>
   <entry>
