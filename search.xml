@@ -24,17 +24,6 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[操作系统总结]]></title>
-    <url>%2F2018%2F09%2F27%2F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BB%93%2F</url>
-    <content type="text"><![CDATA[前言下面给出操作系统相关的总结 操作系统第一篇 [引论] 操作系统第二篇 [进程管理] 操作系统第三篇 [线程] 操作系统第四篇 [处理机调度] 操作系统第五篇 [死锁] 操作系统第六篇 [存储器管理] 操作系统第七篇 [设备管理] 以上便是关于操作系统的一些总结好的文章。我会在后面的学习自己学习完之后再进行补充，形成自己的理解。 脚踏实地，仰望星空！]]></content>
-      <categories>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[面试前需要了解的东西]]></title>
     <url>%2F2018%2F09%2F27%2F%E9%9D%A2%E8%AF%95%E5%89%8D%E9%9C%80%E8%A6%81%E4%BA%86%E8%A7%A3%E7%9A%84%E4%B8%9C%E8%A5%BF%2F</url>
     <content type="text"><![CDATA[前言本篇博客给出别人整理出的一些面试常见题目，在大二下面试的过程中经常问到的一些，这篇博文总结的也非常棒，里面也有博主自己整理的好的资源的链接。 仰望星空，脚踏实地！ 链接1.0 面试前需要了解的东西 2.0 几道让你拿offer的面试题 3.0 基础面试题 上面三个链接都包含的信息量比较大，需要耐心读完，理解！]]></content>
@@ -55,6 +44,17 @@
       </tags>
   </entry>
   <entry>
+    <title><![CDATA[操作系统总结]]></title>
+    <url>%2F2018%2F09%2F27%2F%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%80%BB%E7%BB%93%2F</url>
+    <content type="text"><![CDATA[前言下面给出操作系统相关的总结 操作系统第一篇 [引论] 操作系统第二篇 [进程管理] 操作系统第三篇 [线程] 操作系统第四篇 [处理机调度] 操作系统第五篇 [死锁] 操作系统第六篇 [存储器管理] 操作系统第七篇 [设备管理] 以上便是关于操作系统的一些总结好的文章。我会在后面的学习中，自己再学习，之后再进行补充，形成自己的理解。 脚踏实地，仰望星空！]]></content>
+      <categories>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[说几道简单算法题]]></title>
     <url>%2F2018%2F09%2F27%2F%E8%AF%B4%E5%87%A0%E9%81%93%E7%AE%80%E5%8D%95%E7%AE%97%E6%B3%95%E9%A2%98%2F</url>
     <content type="text"><![CDATA[简答算法总结先给出八大排序的链接： 八大基础排序总结 链接 上面的理解后，下面给出常见简单算法题： 十道简单算法题(一) 十道简单算法题(二)]]></content>
@@ -63,6 +63,17 @@
       </categories>
       <tags>
         <tag>简单算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Spring 总结]]></title>
+    <url>%2F2018%2F09%2F27%2FSpring-%E6%80%BB%E7%BB%93%2F</url>
+    <content type="text"><![CDATA[前言本篇博客是关于框架Spring 的一些好的总结，给出链接以更好的学习。 链接Spring 入门第一篇 Spring [依赖注入] Spring [AOP模块] Spring [DAO模块] SpringMVC [开发Controller] SpringMVC [参数绑定、数据回显、文件上传] SpringMVC [校验器、统一处理异常。RESTful、拦截器] SpringBoot 入门 SpringData JPA 入门 Spring IOC 总结 Spring AOP总结 上面是关于Spring 的一些总结，非常棒。 脚踏实地，仰望星空！]]></content>
+      <categories>
+        <category>Spring</category>
+      </categories>
+      <tags>
+        <tag>spring</tag>
       </tags>
   </entry>
   <entry>
