@@ -101,8 +101,7 @@
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/3769423-0b6cb32614fa53de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://img.blog.csdn.net/20151107223240673">
 <meta property="og:image" content="https://pic4.zhimg.com/80/v2-632a9436e9758d3e4f012dd3affcb477_hd.jpg">
-<meta property="og:image" content="http://img.blog.csdn.net/20151107223240673">
-<meta property="og:updated_time" content="2018-09-19T11:58:49.091Z">
+<meta property="og:updated_time" content="2018-10-09T12:55:49.528Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初探 Java 的内存模型">
 <meta name="twitter:description" content="你的努力终将会有回报，路漫漫其修远兮，吾将上下而求索！   前言上一篇博文中叙述了JVM的内存区域，而与之相似的是Java内存模型。其实JVM与JMM两者之间并不是同一个层次的划分，这两者基本是没有关系的。 但硬要说出点关系，则从变量、主内存、工作内存定义看，对应关系如下： 主内存 ——-&amp;gt; Java堆中对象实例数据部分 工作内存 ——–&amp;gt; 虚拟机栈中部分区域 从更低层次说，对应关系">
@@ -539,7 +538,6 @@
 <p>2、内存间是怎么样交互进行信息传递的？</p>
 <p>3、<code>volitile</code> 关键字到底是如何保证一个共享变量的可见性、又如何做到禁止指令重排序，从而保证代码在多线程条件下顺序执行？</p>
 <p>基于以上三个问题，我们做了长篇幅的解释，大体原理可说明说下：<br>1、Java 内存模型原理：</p>
-<p><img src="http://img.blog.csdn.net/20151107223240673" alt="âæ·±å¥çè§£javaèææºç¬¬12ç« å¾çâçå¾çæç´¢ç»æ"></p>
 <p>2、共享变量通过以主内存作为媒介，在多线程间进行交互。</p>
 <p>3、 （1） 保证可见性：<code>lock</code> 前缀，将<strong>使得本CPU的Cache（高速缓存）写入了内存，该写入动作也会引起别的CPU或者别的内核 无效化 （Invalidate）其Cache，这种操作相当于对Cache中的变量做了一次前面介绍Java内存模式中所说的“store和write”操作</strong>。</p>
 <p>（2）、禁止指令重排序：增加内存屏障。（<code>lock前缀</code> ）</p>
